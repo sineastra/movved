@@ -8,9 +8,9 @@ import { asideNavPropsInterface } from "../_misc/_interfaces"
 const AsideNav = ({ loggedUser, className = '' }: asideNavPropsInterface) => {
 	return (
 		<aside className={ className }>
-			<Link to="movies">Филми</Link>
-			<Link to="series">Сериали</Link>
-			<Link to="actors">Актьори</Link>
+			<Link to="/movies">Movies</Link>
+			<Link to="/series">Series</Link>
+			<Link to="/actors">Actors</Link>
 			<div className={ styles.userMobileNavLink }>
 				{ loggedUser
 					? <div className={ styles.loggedInUser }>

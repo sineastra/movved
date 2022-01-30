@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import DesktopHeader from "./DesktopHeader"
 import { userInterface } from "../../../_misc/interfaces"
+import runNavLinksTests from "../_misc/abstractTests"
 
 
 describe("---> Testing auth links/section", () => {
@@ -49,32 +50,10 @@ describe("---> Testing auth links/section", () => {
 	})
 })
 
-describe("---> Testing navigation links", () => {
-	const generateData = () => {
-		const navLinksTextsTemplate = ['movies', 'series', 'actors']
-		const searchRegex = new RegExp(navLinksTextsTemplate.join("|"), "i")
-		const { getAllByText } = render(
-			<BrowserRouter>
-				<DesktopHeader loggedUser={ null }/>
-			</BrowserRouter>,
-		)
-		const navLinks = getAllByText(searchRegex)
-
-		return navLinks
-	}
-
-	it("should show proper navigation links texts", () => {
-		const navLinks = generateData()
-
-		expect(navLinks.length).toBe(3)
-	})
-
-	it("nav links should lead to proper pages", () => {
-		const navLinks = generateData()
-		const navLinksHrefsTemplate = ['/movies', '/series', '/actors']
-
-		navLinks.forEach((x, i) => {
-			expect(x.closest('a')).toHaveAttribute('href', navLinksHrefsTemplate[i])
-		})
-	})
-})
+runNavLinksTests(
+	{
+		navLinksTexts: ['movies', 'series', 'actors'],
+		navLinksHrefs: ['/movies', '/series', '/actors'],
+		container: <DesktopHeader loggedUser={ null }/>,
+	},
+)
