@@ -1,4 +1,4 @@
-const LandingPage = (props) => {
+const LandingPage = () => {
 	return (
 		<div>
 			Landing Page

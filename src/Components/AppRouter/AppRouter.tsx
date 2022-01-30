@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import LandingPage from "../../Pages/LandingPage/LandingPage.jsx"
-import MainLayout from "../../Layouts/MainLayout.jsx"
+import LandingPage from "../../Pages/LandingPage/LandingPage"
+import MainLayout from "../../Layouts/MainLayout"
 
 
 const AppRouter = () => {
