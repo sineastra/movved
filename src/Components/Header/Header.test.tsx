@@ -42,8 +42,62 @@ const resizeToMinDesktopWidth = () => {
 	})
 }
 
-describe("---> Testing showing of proper header on mobile and on desktop views", () => {
+const loggingAuthLinksTesting = (screenType: string) => {
+	const isMobile = screenType === 'mobile'
+	describe(`---> ${ isMobile ? 'MOBILE' : 'DESKTOP' } ---> Testing whether sign in and sign out dispatches change the user auth section`, () => {
+		afterEach(() => {
+			act(() => {
+				store.dispatch(signOutUser(null))
+			})
+		})
 
+		it("should change from SIGN IN to NAME and PICTURE on completed sign in dispatch", () => {
+			if (isMobile) {
+				resizeToMobile()
+			}
+			renderScreen(store)
+			const signInLink = screen.getByText(/sign in/i)
+
+			expect(signInLink).toBeVisible()
+
+			act(() => {
+				store.dispatch(signInUser(loggedInUser))
+			})
+
+			const profileImg = screen.getByAltText('default-profile')
+			const userName = screen.getByText(loggedInUser.name)
+
+			expect(signInLink).not.toBeInTheDocument()
+			expect(profileImg).toBeVisible()
+			expect(userName).toBeVisible()
+		})
+		it("should change from  NAME and PICTURE to SIGN IN on completed sign out dispatch", () => {
+			if (isMobile) {
+				resizeToMobile()
+			}
+			renderScreen(store)
+			act(() => {
+				store.dispatch(signInUser(loggedInUser))
+			})
+
+			const profileImg = screen.getByAltText('default-profile')
+			const userName = screen.getByText(loggedInUser.name)
+
+			expect(profileImg).toBeVisible()
+			expect(userName).toBeVisible()
+
+			act(() => {
+				store.dispatch(signOutUser(null))
+			})
+
+			const signInLink = screen.getByText(/sign in/i)
+
+			expect(signInLink).toBeVisible()
+		})
+	})
+}
+
+describe("---> Testing showing of proper header on mobile and on desktop views", () => {
 	beforeEach(() => {
 		renderScreen(store)
 	})
@@ -95,50 +149,5 @@ describe("--> Testing showing of the aside nav on pressing bars icon on mobile v
 	})
 })
 
-describe("--> Testing whether sign in and sign out dispatches change the user auth section", () => {
-
-	afterEach(() => {
-		act(() => {
-			store.dispatch(signOutUser(null))
-		})
-	})
-
-	it("DESKTOP -> should change from SIGN IN to NAME and PICTURE on completed sign in dispatch", () => {
-		renderScreen(store)
-		const signInLink = screen.getByText(/sign in/i)
-
-		expect(signInLink).toBeVisible()
-
-		act(() => {
-			store.dispatch(signInUser(loggedInUser))
-		})
-
-		const profileImg = screen.getByAltText('default-profile')
-		const userName = screen.getByText(loggedInUser.name)
-
-		expect(signInLink).not.toBeInTheDocument()
-		expect(profileImg).toBeVisible()
-		expect(userName).toBeVisible()
-	})
-	it("DESKTOP -> should change from  NAME and PICTURE to SIGN IN on completed sign out dispatch", () => {
-		renderScreen(store)
-		act(() => {
-			store.dispatch(signInUser(loggedInUser))
-		})
-
-		const profileImg = screen.getByAltText('default-profile')
-		const userName = screen.getByText(loggedInUser.name)
-
-		expect(profileImg).toBeVisible()
-		expect(userName).toBeVisible()
-
-		act(() => {
-			store.dispatch(signOutUser(null))
-		})
-
-		const signInLink = screen.getByText(/sign in/i)
-
-		expect(signInLink).toBeVisible()
-	})
-
-})
+loggingAuthLinksTesting('mobile')
+loggingAuthLinksTesting('desktop')
