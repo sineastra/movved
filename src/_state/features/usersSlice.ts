@@ -3,19 +3,22 @@ import { signedUserInfoInterface, userInterface } from "../../_misc/interfaces"
 
 
 const initialState: userInterface = {
-	loggedUser: { name: 'Pesho', email: 'pesho@abv.bg', password: 'sasho123' },
+	loggedUser: null,
 }
 
 const usersSlice = createSlice({
 	name: 'users',
 	initialState,
 	reducers: {
-		signUser: ({ loggedUser }, action: PayloadAction<signedUserInfoInterface>) => {
-			loggedUser = loggedUser ? null : { name: 'Pesho', email: 'pesho@abv.bg', password: 'sasho123' }
+		signInUser: (state, action: PayloadAction<signedUserInfoInterface>) => {
+			state.loggedUser = action.payload
+		},
+		signOutUser: (state, action: PayloadAction<null>) => {
+			state.loggedUser = null
 		},
 	},
 })
 
-export const { signUser } = usersSlice.actions
+export const { signInUser, signOutUser } = usersSlice.actions
 
 export default usersSlice.reducer

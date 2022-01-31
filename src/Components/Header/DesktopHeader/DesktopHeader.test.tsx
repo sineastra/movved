@@ -1,55 +1,34 @@
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import DesktopHeader from "./DesktopHeader"
-import { userInterface } from "../../../_misc/interfaces"
-import runNavLinksTests from "../_misc/abstractTests"
+import { signedUserInfoInterface } from "../../../_misc/interfaces"
+import { runAuthLinksTests, runNavLinksTests } from "../_misc/abstractTests"
 
 
-describe("---> Testing auth links/section", () => {
-	const { loggedUser }: userInterface = {
-		loggedUser: {
-			name: 'Pesho',
-			email: 'pesho@abv.bg',
-			password: 'sasho123',
-		},
-	}
+const loggedInUser: signedUserInfoInterface = {
+	name: 'Pesho',
+	email: 'pesho@abv.bg',
+	password: 'sasho123',
+}
 
-	it('should SHOW sign in link when user is SIGNED OUT', () => {
-		render(
-			<BrowserRouter>
-				<DesktopHeader loggedUser={ null }/>
-			</BrowserRouter>,
-		)
-		const signInLink = screen.getByText(/sign in/i, { exact: true })
+const renderScreen = (loggedUser: signedUserInfoInterface | null) => {
+	render(
+		<BrowserRouter>
+			<DesktopHeader loggedUser={ loggedUser }/>
+		</BrowserRouter>,
+	)
+}
 
-		expect(signInLink).toBeVisible()
-	})
+describe("---> testing search input", () => {
+	it("search input should be present on the header", () => {
+		renderScreen(loggedInUser)
+		const searchBar = screen.getByRole('searchbox') as HTMLInputElement
 
-	it('should HIDE sign in link when user is SIGNED IN ', () => {
-		render(
-			<BrowserRouter>
-				<DesktopHeader loggedUser={ loggedUser }/>
-			</BrowserRouter>,
-		)
-		const signInLink = screen.queryByText(/sign in/i)
-
-		expect(signInLink).toBeNull()
-	})
-
-	it("should show IMAGE and NAME when the user is SIGNED IN", () => {
-		render(
-			<BrowserRouter>
-				<DesktopHeader loggedUser={ loggedUser }/>
-			</BrowserRouter>,
-		)
-		const profileImg = screen.getByAltText('default-profile')
-		const userName = screen.getByText(loggedUser.name)
-
-		expect(profileImg).toBeInTheDocument()
-		expect(userName).toBeInTheDocument()
+		expect(searchBar).toBeInTheDocument()
 	})
 })
 
+runAuthLinksTests({ renderScreen, loggedInUser })
 runNavLinksTests(
 	{
 		navLinksTexts: ['movies', 'series', 'actors'],

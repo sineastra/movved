@@ -6,15 +6,13 @@ import userEvent from "@testing-library/user-event"
 
 describe("Testing search input", () => {
 	const generateData = () => {
-		const { getByRole } = render(
+		render(
 			<BrowserRouter>
 				<DesktopHeader loggedUser={ null }/>
 			</BrowserRouter>,
 		)
 
-		const searchBar = getByRole('searchbox') as HTMLInputElement
-
-		return searchBar
+		return screen.getByRole('searchbox') as HTMLInputElement
 	}
 
 	const simulateInputSubmit = async (keyboardSubmit: boolean) => {
@@ -31,12 +29,6 @@ describe("Testing search input", () => {
 
 		return { searchParam, searchInput }
 	}
-
-	it("search input should be present on the header", () => {
-		const searchBar = generateData()
-
-		expect(searchBar).toBeInTheDocument()
-	})
 
 	it("should change value on user input", async () => {
 		const user = userEvent.setup()

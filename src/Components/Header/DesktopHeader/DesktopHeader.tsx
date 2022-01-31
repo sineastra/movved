@@ -15,7 +15,7 @@ const DesktopHeader = ({ loggedUser = {
 	const pathname = location.pathname
 
 	return (
-		<div className={ `${ className }` }>
+		<div className={ `${ className }` } data-testid="desktop-header">
 			<Link to="movies">Movies</Link>
 			<Link to="series">Series</Link>
 			<Link to="actors">Actors</Link>

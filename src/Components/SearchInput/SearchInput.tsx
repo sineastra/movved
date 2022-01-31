@@ -3,12 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { FaSearch } from "react-icons/fa"
 import { BaseSyntheticEvent, useEffect, useState } from "react"
 
-
-interface searchInputPrpsIntF {
+interface searchInputPropsIntF {
 	pathname: string
 }
 
-const SearchInput = ({ pathname }: searchInputPrpsIntF) => {
+const SearchInput = ({ pathname }: searchInputPropsIntF ) => {
 	const [searchValue, setSearchValue] = useState('')
 	const navigate = useNavigate()
 
@@ -17,7 +16,7 @@ const SearchInput = ({ pathname }: searchInputPrpsIntF) => {
 
 		if (searchValue !== '') {
 			navigate({
-				pathname: '/',
+				pathname: pathname,
 				search: `?search=${ searchValue }`,
 			})
 			setSearchValue('')
@@ -30,7 +29,7 @@ const SearchInput = ({ pathname }: searchInputPrpsIntF) => {
 	}
 
 	useEffect(() => {
-		// setSearchValue()
+		setSearchValue('')
 	}, [])
 
 	return (

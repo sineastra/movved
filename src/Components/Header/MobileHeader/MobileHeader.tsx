@@ -8,7 +8,7 @@ import SearchInput from "../../SearchInput/SearchInput"
 const MobileHeader = ({ toggleAsideNav, className = '' }: mobilePropsInterface) => {
 
 	return (
-		<div className={ className }>
+		<div className={ className } data-testid="mobile-header">
 			<div className={ styles.mainLogoWrapper }>
 				<img src={ mainLogo } alt="main-logo"/>
 			</div>

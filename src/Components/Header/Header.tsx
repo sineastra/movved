@@ -32,14 +32,15 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	const asideNavVisibilityClass = windowWidth <= 863 && showAsideNav ? '' : styles.hidden
-	const mobileVisibilityClass = windowWidth <= 863 ? '' : styles.hidden
-	const desktopVisibilityClass = windowWidth <= 863 ? styles.hidden : ''
+	const asideNavVisibilityClass = windowWidth <= 768 && showAsideNav ? '' : styles.hidden
 
 	return (
 		<header>
-			<DesktopHeader loggedUser={ loggedUser } className={ `${ desktopVisibilityClass }` }/>
-			<MobileHeader toggleAsideNav={ toggleAsideNav } className={ `${ mobileVisibilityClass }` }/>
+			{
+				windowWidth <= 768
+					? <MobileHeader toggleAsideNav={ toggleAsideNav }/>
+					: <DesktopHeader loggedUser={ loggedUser }/>
+			}
 			<AsideNav loggedUser={ loggedUser } className={ asideNavVisibilityClass }/>
 		</header>
 	)

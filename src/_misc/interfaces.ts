@@ -5,5 +5,5 @@ export interface signedUserInfoInterface {
 }
 
 export interface userInterface {
-	loggedUser: signedUserInfoInterface | null
+	loggedUser: signedUserInfoInterface |  null
 }

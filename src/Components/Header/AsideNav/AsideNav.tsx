@@ -19,7 +19,7 @@ const AsideNav = ({ loggedUser, className = '' }: asideNavPropsInterface) => {
 						<div className={ styles.profileName }>{ loggedUser?.name }</div>
 						<FaAngleDown/>
 					</div>
-					: <Link to="sign-in" className={ styles.loggedOffUser }>Вход</Link>
+					: <Link to="sign-in" className={ styles.loggedOffUser }>Sign In</Link>
 				}
 			</div>
 		</aside>
