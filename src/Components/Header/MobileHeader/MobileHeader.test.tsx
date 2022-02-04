@@ -9,25 +9,27 @@ const mockedToggleAsideNav = (e: MouseEvent) => {
 }
 
 describe("Testing Mobile Header", () => {
-	const renderMobileHeader = () => {
+	const renderMobileHeader = () =>
 		render(
 			<BrowserRouter>
 				<MobileHeader toggleAsideNav={ mockedToggleAsideNav }/>
 			</BrowserRouter>,
 		)
-	}
+
 	it("site logo should be present", () => {
 		renderMobileHeader()
 		const logo = screen.getByAltText('main-logo')
 
 		expect(logo).toBeInTheDocument()
 	})
+
 	it("Bars for toggle side menu should be present", () => {
 		renderMobileHeader()
 		const sideBars = screen.getByTitle(/open side menu/i)
 
 		expect(sideBars).toBeInTheDocument()
 	})
+
 	it("search input should be present", () => {
 		renderMobileHeader()
 		const searchInput = screen.getByRole('searchbox')

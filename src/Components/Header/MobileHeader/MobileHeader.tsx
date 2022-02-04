@@ -1,9 +1,14 @@
-import { mobilePropsInterface } from "../_misc/_interfaces"
 import styles from "../Header.module.scss"
 import { FaBars } from "react-icons/fa"
 import mainLogo from "../../../assets/main-logo.svg"
 import SearchInput from "../../SearchInput/SearchInput"
+import React from "react"
 
+
+interface mobilePropsInterface {
+	toggleAsideNav: (event: React.MouseEvent) => void,
+	className?: string
+}
 
 const MobileHeader = ({ toggleAsideNav, className = '' }: mobilePropsInterface) => {
 

@@ -2,13 +2,18 @@ import { BrowserRouter } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import Header from "./Header"
 import { Provider } from "react-redux"
-import { EnhancedStore } from "@reduxjs/toolkit"
-import store from "../../_state/app/store"
+import { configureStore, EnhancedStore } from "@reduxjs/toolkit"
 import { act } from "react-dom/test-utils"
 import user from "@testing-library/user-event"
-import { signInUser, signOutUser } from "../../_state/features/usersSlice"
+import usersReducer, { signInUser, signOutUser } from "../../_state/features/usersSlice"
 import { signedUserInfoInterface } from "../../_misc/interfaces"
 
+
+const store = configureStore({
+	reducer: {
+		users: usersReducer,
+	},
+})
 
 const renderScreen = (store: EnhancedStore) => {
 	render(
