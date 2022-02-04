@@ -4,11 +4,12 @@ import App from './Components/App/App'
 import * as serviceWorker from './serviceWorker'
 import { Provider } from "react-redux"
 import store from "./_state/app/store"
+import "./normalize.css"
 
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Provider store={store}>
+		<Provider store={ store }>
 			<App/>
 		</Provider>
 	</React.StrictMode>,

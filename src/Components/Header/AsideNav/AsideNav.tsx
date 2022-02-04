@@ -15,19 +15,19 @@ interface asideNavPropsInterface {
 const AsideNav = ({ loggedUser, className = '' }: asideNavPropsInterface) => {
 	const [showSubmenu, setShowSubmenu] = useState(false)
 
-	const toggleSubmenu = () => {
+	const toggleAuthSubmenu = () => {
 		setShowSubmenu(oldState => !oldState)
 	}
 
 	return (
-		<aside className={ className }>
+		<aside className={ styles[className] }>
 			<Link to="/movies">Movies</Link>
 			<Link to="/series">Series</Link>
 			<Link to="/actors">Actors</Link>
 			<div className={ styles.userMobileNavLink }>
 				{ loggedUser
 					? <>
-						<div className={ styles.loggedInUser }  role="submenu-toggle" onClick={ toggleSubmenu }>
+						<div className={ styles.loggedInUser }  role="submenu-toggle" onClick={ toggleAuthSubmenu }>
 							<img src={ defaultProfileImg } alt="default-profile"
 							     className={ styles.defaultProfilePic }/>
 							<div className={ styles.profileName }>{ loggedUser?.name }</div>

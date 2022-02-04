@@ -8,9 +8,9 @@ interface userSubmenuIntF {
 }
 
 const UserSubmenu = ({ className = '' }: userSubmenuIntF) => {
+	const navigate = useNavigate()
 
 	const logout = (e: SyntheticEvent) => {
-		const navigate = useNavigate()
 		console.log('logged out')
 
 		navigate("/")

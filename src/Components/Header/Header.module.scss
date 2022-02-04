@@ -1,3 +1,8 @@
-.hidden {
-    display: none;
+@import "../../_scssPartials/mixins/globalClasses";
+
+@include hidden;
+
+.header {
+    width: 100vw;
+    height: 50px;
 }

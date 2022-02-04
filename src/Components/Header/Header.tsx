@@ -1,5 +1,4 @@
 import styles from "./Header.module.scss"
-import { FaAngleDown, FaBars } from "react-icons/fa"
 import { useSelector } from "react-redux"
 import { RootState } from "../../_state/app/store"
 import { useEffect, useState } from "react"
@@ -32,10 +31,10 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	const asideNavVisibilityClass = windowWidth <= 768 && showAsideNav ? '' : styles.hidden
+	const asideNavVisibilityClass = windowWidth <= 768 && showAsideNav ? '' : 'hidden'
 
 	return (
-		<header>
+		<header className={ styles.header }>
 			{
 				windowWidth <= 768
 					? <MobileHeader toggleAsideNav={ toggleAsideNav }/>

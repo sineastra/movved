@@ -1,3 +1,46 @@
+.formElement {
+  width: 200px;
+  height: 50px;
+}
 
+.searchIconWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.searchInputWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.searchIcon {
+  position: absolute;
+  height: 100%;
+  left: 10px;
+  top: 0;
+  z-index: 1;
+  font-size: 1.1em;
+  color: gray;
+}
+
+.searchInput {
+  width: 100%;
+  text-indent: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 /*# sourceMappingURL=SearchInput.module.css.map */

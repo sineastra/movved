@@ -2,20 +2,21 @@ import { BrowserRouter } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import MobileHeader from "./MobileHeader"
 import { MouseEvent } from "react"
+import { act } from "react-dom/test-utils"
 
 
 const mockedToggleAsideNav = (e: MouseEvent) => {
 	return undefined
 }
 
-describe("Testing Mobile Header", () => {
-	const renderMobileHeader = () =>
-		render(
-			<BrowserRouter>
-				<MobileHeader toggleAsideNav={ mockedToggleAsideNav }/>
-			</BrowserRouter>,
-		)
+const renderMobileHeader = () =>
+	render(
+		<BrowserRouter>
+			<MobileHeader toggleAsideNav={ mockedToggleAsideNav }/>
+		</BrowserRouter>,
+	)
 
+describe("---> Testing Mobile Header features", () => {
 	it("site logo should be present", () => {
 		renderMobileHeader()
 		const logo = screen.getByAltText('main-logo')
@@ -29,10 +30,9 @@ describe("Testing Mobile Header", () => {
 
 		expect(sideBars).toBeInTheDocument()
 	})
-
 	it("search input should be present", () => {
 		renderMobileHeader()
-		const searchInput = screen.getByRole('searchbox')
+		const searchInput = screen.getByRole("search-form")
 
 		expect(searchInput).toBeInTheDocument()
 	})

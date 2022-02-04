@@ -145,10 +145,10 @@ describe("--> Testing showing of the aside nav on pressing bars icon on mobile v
 
 	it("should hide aside menu when pressing again on the button", async () => {
 		const barsElement = screen.getByTitle(/open side menu/i)
-		const asideNav = screen.getByRole('complementary')
 
 		await user.click(barsElement)
 		await user.click(barsElement)
+		const asideNav = screen.queryByRole('complementary')
 
 		expect(asideNav).toHaveClass('hidden')
 	})
