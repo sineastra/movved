@@ -6,9 +6,9 @@ import { runAuthLinksTests, runAuthMenuToggleTest, runAuthSubmenuTests, runNavLi
 
 
 const loggedInUser: signedUserInfoInterface = {
-	name: 'Pesho',
-	email: 'pesho@abv.bg',
-	password: 'sasho123',
+	name: 'a',
+	email: 'a@a.a',
+	password: 'a',
 	profilePic: null,
 }
 const renderScreen = (loggedUser: signedUserInfoInterface | null): RenderResult =>
