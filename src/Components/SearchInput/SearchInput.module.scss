@@ -16,10 +16,10 @@
 .searchInputWrapper {
     width: 100%;
     height: 100%;
-    @include centeredFlex;
     position: absolute;
     left: 0;
     top: 0;
+    @include centeredFlex;
 }
 
 .searchIcon {
@@ -35,7 +35,7 @@
 .searchInput {
     width: 100%;
     text-indent: 30px;
-    border: 1px solid lightgray;
+    border: 2px solid var(--theme-secondary-color);
     border-radius: 5px;
     padding: 5px;
 }

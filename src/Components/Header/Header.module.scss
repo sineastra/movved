@@ -1,8 +1,11 @@
-@import "../../_scssPartials/mixins/globalClasses";
-
-@include hidden;
+@import "./_misc/localVariables";
 
 .header {
     width: 100vw;
-    height: 50px;
+    height: $header-height;
+}
+
+aside.hidden {
+    opacity: 0;
+    transition: all 0.2s ease-out;
 }

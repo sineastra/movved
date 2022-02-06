@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import styles from "../Header.module.scss"
+import styles from "./AsideNav.module.scss"
 import defaultProfileImg from "../../../assets/default-profile.svg"
 import { FaAngleDown } from "react-icons/fa"
 import { signedUserInfoInterface } from "../../../_misc/interfaces"
@@ -9,10 +9,11 @@ import { useState } from "react"
 
 interface asideNavPropsInterface {
 	loggedUser: signedUserInfoInterface | null,
-	className?: string,
+	wrapperClassName?: string,
+	visibilityWrapperClassName?: string
 }
 
-const AsideNav = ({ loggedUser, className = '' }: asideNavPropsInterface) => {
+const AsideNav = ({ loggedUser, wrapperClassName = '' }: asideNavPropsInterface) => {
 	const [showSubmenu, setShowSubmenu] = useState(false)
 
 	const toggleAuthSubmenu = () => {
@@ -20,14 +21,14 @@ const AsideNav = ({ loggedUser, className = '' }: asideNavPropsInterface) => {
 	}
 
 	return (
-		<aside className={ styles[className] }>
-			<Link to="/movies">Movies</Link>
-			<Link to="/series">Series</Link>
-			<Link to="/actors">Actors</Link>
+		<aside className={ `${ styles.mainWrapper } ${ wrapperClassName }` }>
+			<Link to="/movies" className={ styles.navLink }>Movies</Link>
+			<Link to="/series" className={ styles.navLink }>Series</Link>
+			<Link to="/actors" className={ styles.navLink }>Actors</Link>
 			<div className={ styles.userMobileNavLink }>
 				{ loggedUser
 					? <>
-						<div className={ styles.loggedInUser }  role="submenu-toggle" onClick={ toggleAuthSubmenu }>
+						<div className={ styles.loggedInUser } role="submenu-toggle" onClick={ toggleAuthSubmenu }>
 							<img src={ defaultProfileImg } alt="default-profile"
 							     className={ styles.defaultProfilePic }/>
 							<div className={ styles.profileName }>{ loggedUser?.name }</div>

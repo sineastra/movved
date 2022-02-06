@@ -1,3 +1,19 @@
+.mainWrapper {
+  height: 300px;
+  opacity: 1;
+  overflow: hidden;
+  background-color: var(--theme-main-color);
+  color: var(--theme-text-color);
+  transition: all 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: auto;
+}
 
+.navLink {
+  color: red;
+}
 
 /*# sourceMappingURL=AsideNav.module.css.map */

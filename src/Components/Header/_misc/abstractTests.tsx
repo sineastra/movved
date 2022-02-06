@@ -1,11 +1,9 @@
 import { act, render, RenderResult, screen } from "@testing-library/react"
-import { BrowserRouter } from "react-router-dom"
-import { ReactElement } from "react"
 import { signedUserInfoInterface } from "../../../_misc/interfaces"
 import user from "@testing-library/user-event"
 
 // These tests are used in both DesktopHeader.test.tsx and in AsideNav.test.tsx, because they test the navigation
-// and the authorization results, which are the same in the aside navigation unit and in the desktop header
+// and the authorization results, which are the same in the aside navigation and in the desktop header
 // which holds the navigation for the desktop part. I just couldn't copy and paste the tests. I felt sharp pain inside.
 
 interface navLinksTestsIntF {

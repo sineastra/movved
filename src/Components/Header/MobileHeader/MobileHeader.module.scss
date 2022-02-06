@@ -1,42 +1,48 @@
 @import "../../../_scssPartials/mixins/mixins";
 @import "../../../_scssPartials/mixins/mediaQueries";
+@import "../_misc/localVariables";
 
-.wrapper {
+
+.mainWrapper {
     width: 100%;
     height: 100%;
-    border-bottom: 1px solid lightgray;
-    background-color: transparent;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
+    z-index: 2;
+    position: relative;
 }
 
 .mainLogoWrapper {
     width: 70px;
-    height: 30px;
+    height: 70px;
+    color: var(--theme-secondary-color);
 
-    & > img {
+    & > svg {
+        border-radius: 2px;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        fill: currentColor;
     }
 }
 
 .toggleAsideNav {
-    @include centeredFlex;
+    @include centeredFlex(row);
+    color: var(--theme-secondary-color);
 
-    width: 40px;
-    height: 100%;
-
+    width: 60px;
+    height: $header-height;
+}
+.barsIcon {
+    height: 60%;
 }
 
-.searchInput {
+form.searchInput {
     @include mobile {
         display: none;
     }
 }
 
-.barsIcon {
-    width: 100%;
-}

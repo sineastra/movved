@@ -1,0 +1,16 @@
+@import "../../../_scssPartials/mixins/mixins";
+@import "../_misc/localVariables";
+
+.mainWrapper {
+    height: $aside-nav-height;
+    opacity: 1;
+    overflow: hidden;
+    background-color: var(--theme-main-color);
+    color: var(--theme-text-color);
+    transition: all 0.2s ease-out;
+    @include displayFlex(space-between, center, auto, column,);
+}
+
+.navLink {
+    color: red
+}

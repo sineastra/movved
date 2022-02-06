@@ -2,7 +2,6 @@ import { BrowserRouter } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import MobileHeader from "./MobileHeader"
 import { MouseEvent } from "react"
-import { act } from "react-dom/test-utils"
 
 
 const mockedToggleAsideNav = (e: MouseEvent) => {
@@ -37,3 +36,4 @@ describe("---> Testing Mobile Header features", () => {
 		expect(searchInput).toBeInTheDocument()
 	})
 })
+

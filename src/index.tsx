@@ -4,6 +4,7 @@ import App from './Components/App/App'
 import * as serviceWorker from './serviceWorker'
 import { Provider } from "react-redux"
 import store from "./_state/app/store"
+import "./index.css"
 import "./normalize.css"
 
 

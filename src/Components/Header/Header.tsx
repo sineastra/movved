@@ -31,7 +31,7 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	const asideNavVisibilityClass = windowWidth <= 768 && showAsideNav ? '' : 'hidden'
+	const wrapperClassName = windowWidth <= 768 && showAsideNav ? '' : styles.hidden
 
 	return (
 		<header className={ styles.header }>
@@ -40,7 +40,9 @@ const Header = () => {
 					? <MobileHeader toggleAsideNav={ toggleAsideNav }/>
 					: <DesktopHeader loggedUser={ loggedUser }/>
 			}
-			<AsideNav loggedUser={ loggedUser } className={ asideNavVisibilityClass }/>
+			<AsideNav loggedUser={ loggedUser }
+			          wrapperClassName={ wrapperClassName }
+			          visibilityWrapperClassName={ styles.visibilityWrapperClassName }/>
 		</header>
 	)
 }
