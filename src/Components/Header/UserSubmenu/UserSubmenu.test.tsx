@@ -8,6 +8,7 @@ const loggedInUser: signedUserInfoInterface = {
 	name: 'Pesho',
 	email: 'pesho@abv.bg',
 	password: 'sasho123',
+	profilePic: null,
 }
 
 const renderScreen = () =>

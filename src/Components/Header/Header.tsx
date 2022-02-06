@@ -1,10 +1,10 @@
 import styles from "./Header.module.scss"
-import { useSelector } from "react-redux"
-import { RootState } from "../../_state/app/store"
 import { useEffect, useState } from "react"
 import DesktopHeader from "./DesktopHeader/DesktopHeader"
 import MobileHeader from "./MobileHeader/MobileHeader"
 import AsideNav from "./AsideNav/AsideNav"
+import { useSelector } from "react-redux"
+import { RootState } from "../../_state/app/store"
 
 
 const Header = () => {
@@ -31,8 +31,6 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	const wrapperClassName = windowWidth <= 768 && showAsideNav ? '' : styles.hidden
-
 	return (
 		<header className={ styles.header }>
 			{
@@ -41,8 +39,7 @@ const Header = () => {
 					: <DesktopHeader loggedUser={ loggedUser }/>
 			}
 			<AsideNav loggedUser={ loggedUser }
-			          wrapperClassName={ wrapperClassName }
-			          visibilityWrapperClassName={ styles.visibilityWrapperClassName }/>
+			          visible={ windowWidth <= 768 && showAsideNav }/>
 		</header>
 	)
 }

@@ -1,8 +1,8 @@
-const MainLogo = () => {
+const MainLogoSVG = () => {
 
 	return (
 		<svg version="1.1" x="0px" y="0px"
-		     viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000">
+		     viewBox="0 0 1000 1000" enableBackground="new 0 0 1000 1000" role="main-logo">
 			<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon</metadata>
 			<g fill="currentcolor">
 				<path d="M820.5,587.9"/>
@@ -17,4 +17,4 @@ const MainLogo = () => {
 	)
 }
 
-export default MainLogo
+export default MainLogoSVG

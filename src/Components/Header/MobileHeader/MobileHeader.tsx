@@ -3,7 +3,8 @@ import { FaBars } from "react-icons/fa"
 import SearchInput from "../../SearchInput/SearchInput"
 import React from "react"
 import { IconContext } from "react-icons"
-import MainLogo from "../../MainLogo/MainLogo"
+import MainLogoSVG from "../../_SVG/MainLogoSVG"
+import { Link } from "react-router-dom"
 
 
 interface mobilePropsInterface {
@@ -16,7 +17,9 @@ const MobileHeader = ({ toggleAsideNav, className = '' }: mobilePropsInterface) 
 	return (
 		<div className={ ` ${ styles.mainWrapper } ${ className }` } data-testid="mobile-header">
 			<div className={ styles.mainLogoWrapper }>
-				<MainLogo/>
+				<Link to="/">
+					<MainLogoSVG/>
+				</Link>
 			</div>
 			<SearchInput pathname={ "/" } className={ styles.searchInput }/>
 			<div className={ styles.toggleAsideNav } onClick={ toggleAsideNav }>

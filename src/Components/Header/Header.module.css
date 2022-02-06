@@ -3,9 +3,4 @@
   height: 50px;
 }
 
-aside.hidden {
-  opacity: 0;
-  transition: all 0.2s ease-out;
-}
-
 /*# sourceMappingURL=Header.module.css.map */

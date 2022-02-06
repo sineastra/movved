@@ -1,4 +1,4 @@
-@mixin displayFlex($justify: auto, $alignItems: auto, $alignContent: auto, $direction: row, ) {
+@mixin displayFlex($direction: row, $justify: initial, $alignItems: initial, $alignContent: initial, ) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -7,5 +7,5 @@
 }
 
 @mixin centeredFlex($direction: row) {
-    @include displayFlex(center, center, center, $direction)
+    @include displayFlex($direction, center, center, center)
 }

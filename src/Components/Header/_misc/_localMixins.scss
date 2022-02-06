@@ -1,0 +1,13 @@
+@import "../../../_scssPartials/mixins/mixins";
+
+@mixin aside-nav-link {
+    height: 25%;
+    text-align: start;
+    text-decoration: none;
+    @include centeredFlex(row);
+    color: var(--theme-text-color);
+
+    &:hover {
+        color: var(--theme-secondary-color)
+    }
+}

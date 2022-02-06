@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 :root {
     --theme-main-color: black;
     --theme-secondary-color: orange;
+    --theme-misc-color-1: white;
     --theme-text-color: white;
 }

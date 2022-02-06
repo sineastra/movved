@@ -18,7 +18,7 @@ const renderMobileHeader = () =>
 describe("---> Testing Mobile Header features", () => {
 	it("site logo should be present", () => {
 		renderMobileHeader()
-		const logo = screen.getByAltText('main-logo')
+		const logo = screen.getByRole('main-logo')
 
 		expect(logo).toBeInTheDocument()
 	})

@@ -54,7 +54,7 @@ const runAuthLinksTests = ({ renderScreen, loggedInUser }: authLinksTestsIntF) =
 
 	it("should show IMAGE and NAME when the user is SIGNED IN", () => {
 		renderScreen(loggedInUser)
-		const profileImg = screen.getByAltText('default-profile')
+		const profileImg = screen.getByRole('profile-img')
 		const userName = screen.getByText(loggedInUser.name)
 
 		expect(profileImg).toBeInTheDocument()

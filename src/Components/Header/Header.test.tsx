@@ -36,6 +36,7 @@ const loggedInUser: signedUserInfoInterface = {
 	name: "a",
 	email: 'a@a.a',
 	password: 'a',
+	profilePic: null,
 }
 
 // default testing width of jest-dom is 1024 pixels, so it is not needed to be resized for desktop,
@@ -69,7 +70,7 @@ const loggingAuthLinksTesting = (screenType: string) => {
 				store.dispatch(signInUser(loggedInUser))
 			})
 
-			const profileImg = screen.getByAltText('default-profile')
+			const profileImg = screen.getByRole('profile-img')
 			const userName = screen.getByText(loggedInUser.name)
 
 			expect(signInLink).not.toBeInTheDocument()
@@ -85,7 +86,7 @@ const loggingAuthLinksTesting = (screenType: string) => {
 				store.dispatch(signInUser(loggedInUser))
 			})
 
-			const profileImg = screen.getByAltText('default-profile')
+			const profileImg = screen.getByRole('profile-img')
 			const userName = screen.getByText(loggedInUser.name)
 
 			expect(profileImg).toBeVisible()

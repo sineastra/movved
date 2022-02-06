@@ -1,16 +1,83 @@
 @import "../../../_scssPartials/mixins/mixins";
 @import "../_misc/localVariables";
+@import "../_misc/localMixins";
+
 
 .mainWrapper {
     height: $aside-nav-height;
     opacity: 1;
-    overflow: hidden;
-    background-color: var(--theme-main-color);
+    transition: opacity 0.3s ease-out;
+    padding: 25px 25px;
+    z-index: 3;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(12px + 1.5vmin);
     color: var(--theme-text-color);
-    transition: all 0.2s ease-out;
-    @include displayFlex(space-between, center, auto, column,);
+    background-color: var(--theme-main-color);
+    @include displayFlex(column, space-between, flex-start, auto,);
+
+    & > a {
+        @include aside-nav-link;
+    }
+
+    &.hidden {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        height: $aside-nav-height;
+    }
 }
 
-.navLink {
-    color: red
+.userNavLinkWrapper {
+    @include aside-nav-link;
+    position: relative;
+    cursor: pointer;
+
+    & > div:first-of-type {
+        @include displayFlex(row, initial, center);
+
+        & > * {
+            padding-right: 5px;
+        }
+    }
+
+    & > div:nth-of-type(2) {
+        height: 160px;
+        position: absolute;
+        background: var(--theme-misc-color-1);
+        border: 1px solid var(--theme-main-color);
+        padding: 10px;
+        border-radius: 5px;
+        top: 90%;
+        left: 0;
+        z-index: 3;
+        white-space: nowrap;
+        @include displayFlex(column, space-between);
+
+        & > div {
+            color: var(--theme-secondary-color);
+        }
+
+        & > hr {
+            width: 100%;
+            border-color: var(--theme-main-color);
+        }
+
+        & > a {
+            text-decoration: none;
+            color: var(--theme-main-color);
+        }
+    }
+}
+
+.profilePicWrapper {
+    color: var(--theme-text-color);
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+}
+
+.loggedOffUser {
+    @include aside-nav-link;
+    color: var(--theme-secondary-color);
+    text-decoration: underline;
 }

@@ -6,6 +6,7 @@ import SearchInput from "../../SearchInput/SearchInput"
 import { signedUserInfoInterface } from "../../../_misc/interfaces"
 import { SyntheticEvent, useState } from "react"
 import UserSubmenu from "../UserSubmenu/UserSubmenu"
+import ProfilePic from "../../ProfilePic/ProfilePic"
 
 
 interface desktopPropsInterface {
@@ -17,6 +18,7 @@ const loggedUserMock: signedUserInfoInterface = {
 	name: 'Pesho',
 	email: 'pesho@abv.bg',
 	password: 'sasho123',
+	profilePic: null,
 }
 
 const DesktopHeader = ({ loggedUser = loggedUserMock, className = '' }: desktopPropsInterface) => {
@@ -38,8 +40,7 @@ const DesktopHeader = ({ loggedUser = loggedUserMock, className = '' }: desktopP
 				{ loggedUser
 					? <>
 						<div className={ styles.loggedInUser } role="submenu-toggle" onClick={ toggleSubmenu }>
-							<img src={ defaultProfileImg } alt="default-profile"
-							     className={ styles.defaultProfilePic }/>
+							<ProfilePic user={ loggedUser }/>
 							<div className={ styles.profileName }>{ loggedUser?.name }</div>
 							<FaAngleDown/>
 						</div>

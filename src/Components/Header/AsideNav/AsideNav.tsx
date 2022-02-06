@@ -1,42 +1,47 @@
 import { Link } from "react-router-dom"
 import styles from "./AsideNav.module.scss"
-import defaultProfileImg from "../../../assets/default-profile.svg"
 import { FaAngleDown } from "react-icons/fa"
 import { signedUserInfoInterface } from "../../../_misc/interfaces"
 import UserSubmenu from "../UserSubmenu/UserSubmenu"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import ProfilePic from "../../ProfilePic/ProfilePic"
 
 
 interface asideNavPropsInterface {
 	loggedUser: signedUserInfoInterface | null,
-	wrapperClassName?: string,
-	visibilityWrapperClassName?: string
+	visible: boolean,
 }
 
-const AsideNav = ({ loggedUser, wrapperClassName = '' }: asideNavPropsInterface) => {
+const AsideNav = ({ loggedUser, visible }: asideNavPropsInterface) => {
 	const [showSubmenu, setShowSubmenu] = useState(false)
 
 	const toggleAuthSubmenu = () => {
 		setShowSubmenu(oldState => !oldState)
 	}
 
+	useEffect(() => {
+		setShowSubmenu(false)
+	}, [visible])
+
+	const visibilityClass = visible ? '' : styles.hidden
+
 	return (
-		<aside className={ `${ styles.mainWrapper } ${ wrapperClassName }` }>
-			<Link to="/movies" className={ styles.navLink }>Movies</Link>
-			<Link to="/series" className={ styles.navLink }>Series</Link>
-			<Link to="/actors" className={ styles.navLink }>Actors</Link>
-			<div className={ styles.userMobileNavLink }>
+		<aside className={ `${ styles.mainWrapper } ${ visibilityClass }` }>
+			<Link to="/movies">Movies</Link>
+			<Link to="/series">Series</Link>
+			<Link to="/actors">Actors</Link>
+			<div className={ styles.userNavLinkWrapper }>
 				{ loggedUser
 					? <>
-						<div className={ styles.loggedInUser } role="submenu-toggle" onClick={ toggleAuthSubmenu }>
-							<img src={ defaultProfileImg } alt="default-profile"
-							     className={ styles.defaultProfilePic }/>
+						<div role="submenu-toggle" onClick={ toggleAuthSubmenu }>
+							<ProfilePic user={ loggedUser } className={ styles.profilePicWrapper }/>
 							<div className={ styles.profileName }>{ loggedUser?.name }</div>
 							<FaAngleDown/>
 						</div>
 						{ showSubmenu && <UserSubmenu/> }
 					</>
 					: <Link to="sign-in" className={ styles.loggedOffUser }>Sign In</Link>
+
 				}
 			</div>
 		</aside>

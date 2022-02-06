@@ -9,12 +9,13 @@ const loggedInUser: signedUserInfoInterface = {
 	name: 'Pesho',
 	email: 'pesho@abv.bg',
 	password: 'sasho123',
+	profilePic: null,
 }
 
 const renderScreen = (loggedUser: signedUserInfoInterface | null) =>
 	render(
 		<BrowserRouter>
-			<AsideNav loggedUser={ loggedUser }/>
+			<AsideNav loggedUser={ loggedUser } visible={ true }/>
 		</BrowserRouter>,
 	)
 
