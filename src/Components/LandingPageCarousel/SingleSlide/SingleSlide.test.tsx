@@ -1,4 +1,4 @@
-import { slideIntF } from "../interfaces"
+import { slideIntF } from "../_interfaces"
 import { BrowserRouter } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
 import SingleSlide from "./SingleSlide"

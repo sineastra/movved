@@ -1,4 +1,4 @@
 export interface slideIntF {
 	image: string,
-	link: string
+	link: string,
 }

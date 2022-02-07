@@ -1,4 +1,4 @@
-import { slideIntF } from "../interfaces"
+import { slideIntF } from "../_interfaces"
 import { Link } from "react-router-dom"
 import styles from "./SingleSlide.module.scss"
 

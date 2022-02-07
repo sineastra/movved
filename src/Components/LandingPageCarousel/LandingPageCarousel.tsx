@@ -1,21 +1,27 @@
 import styles from "./LandingPageCarousel.module.scss"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { slideIntF } from "./interfaces"
+import { slideIntF } from "./_interfaces"
 import SingleSlide from "./SingleSlide/SingleSlide"
 
 
-const LandingPageCarousel = () => {
-	const slides: slideIntF[] = [
-		{ image: 'a', link: 'b' },
-		{ image: 'a', link: 'b' },
-		{ image: 'a', link: 'b' },
-	]
+interface propsIntF {
+	slides: slideIntF[]
+}
+
+const LandingPageCarousel = ({ slides }: propsIntF) => {
 
 	return (
-		<div>
-			<Carousel>
-				{ slides.map(x => <SingleSlide image={ x.image } link={ x.link }/>) }
+		<div >
+			<Carousel
+				autoPlay={ true }
+				interval={ 4000 }
+				infiniteLoop={ true }
+				labels={ { leftArrow: 'Previous Movie', rightArrow: 'Next Movie', item: 'Watch' } }
+				showThumbs={ false }
+				dynamicHeight={ true }
+			>
+				{ slides.map(x => <SingleSlide image={ x.image } link={ x.link } key={ x.image }/>) }
 			</Carousel>
 		</div>
 	)
