@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa"
 import SearchInput from "../../SearchInput/SearchInput"
 import React from "react"
 import { IconContext } from "react-icons"
-import MainLogoSVG from "../../_SVG/MainLogoSVG"
+import MainLogoSVG from "../../_SVGs/MainLogoSVG"
 import { Link } from "react-router-dom"
 
 

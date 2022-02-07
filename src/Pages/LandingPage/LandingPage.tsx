@@ -1,8 +1,9 @@
+import LandingPageCarousel from "../../Components/LandingPageCarousel/LandingPageCarousel"
+
+
 const LandingPage = () => {
 	return (
-		<div>
-
-		</div>
+		<LandingPageCarousel/>
 	)
 }
 

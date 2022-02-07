@@ -1,5 +1,5 @@
 import { signedUserInfoInterface } from "../../_misc/interfaces"
-import DefaultProfilePicSVG from "../_SVG/DefaultProfilePicSVG"
+import DefaultProfilePicSVG from "../_SVGs/DefaultProfilePicSVG"
 import styles from "./ProfilePic.module.scss"
 
 
