@@ -1,8 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { signedUserInfoInterface, usersInterface } from "../../_misc/interfaces"
+import { signedUserInfoInterface } from "../../_misc/interfaces"
 
 
-const initialState: usersInterface = {
+interface usersReducerIntF {
+	loggedUser: signedUserInfoInterface | null
+}
+
+const initialState: usersReducerIntF = {
 	loggedUser: null,
 }
 

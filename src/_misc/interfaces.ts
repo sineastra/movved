@@ -5,6 +5,8 @@ export interface signedUserInfoInterface {
 	profilePic: string | null,
 }
 
-export interface usersInterface {
-	loggedUser: signedUserInfoInterface | null
+export interface movie {
+	title: string,
+	poster: string,
 }
+
