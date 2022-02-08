@@ -1,7 +1,11 @@
 .categoriesWrapper {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
-.categoriesWrapper > h2 {
+.categoriesWrapper .singleCategoryWrapper {
+  margin-top: 50px;
+}
+.categoriesWrapper .singleCategoryWrapper > h2 {
   padding-left: 4%;
   font-family: "Nunito", sans-serif;
 }

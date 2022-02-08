@@ -59,14 +59,31 @@ const mockedMovies: movie[] = [
 	},
 ]
 
+interface singleCategoryPropsIntF {
+	title: string,
+	movies: movie[]
+}
+const SingleCategory = ({ title, movies }: singleCategoryPropsIntF) => {
+	return (
+		<div className={ styles.singleCategoryWrapper }>
+			<h2>{ title }</h2>
+			<MoviesCategoryCarousel movies={ movies }/>
+		</div>
+	)
+}
+
 const LandingPage = () => {
+	const headings: string[] = ['Нашите предложения', 'Нови филми', 'Нови сериали', 'Популярни', 'Дублирани на български']
+	const promiseAllMock = [mockedMovies, mockedMovies, mockedMovies, mockedMovies, mockedMovies]
+
 	return (
 		<>
 			<LandingPageCarousel slides={ mockedData }/>
-			<div className={ styles.categoriesWrapper }>
-				<h2>Нашите предложения</h2>
-				<MoviesCategoryCarousel movies={ mockedMovies }/>
-			</div>
+			<section className={ styles.categoriesWrapper }>
+				{ promiseAllMock.map((movies, index) => {
+					return <SingleCategory movies={ movies } title={ headings[index] } key={ headings[index] }/>
+				}) }
+			</section>
 		</>
 	)
 }

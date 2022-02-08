@@ -1,8 +1,13 @@
 .categoriesWrapper {
     margin-top: 50px;
+    margin-bottom: 50px;
 
-    & > h2 {
-        padding-left: 4%;
-        font-family: 'Nunito', sans-serif;
+    & .singleCategoryWrapper {
+        margin-top: 50px;
+
+        & > h2 {
+            padding-left: 4%;
+            font-family: 'Nunito', sans-serif;
+        }
     }
 }
