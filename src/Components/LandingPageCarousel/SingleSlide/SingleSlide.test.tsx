@@ -10,7 +10,7 @@ const renderScreen = ({ image, link }: slideIntF) => render(
 	</BrowserRouter>,
 )
 
-describe("---> Testing the single slide Components/LandingPageCarouser/SingleSlide", () => {
+describe("---> Testing the single slide Components/LandingPageCarouser/SingleGridMovie", () => {
 	const mockedSlideData: slideIntF = { image: 'a', link: 'b' }
 
 	beforeEach(() => {

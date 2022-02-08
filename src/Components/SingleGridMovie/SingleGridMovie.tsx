@@ -1,6 +1,6 @@
-import { movie } from "../../../_misc/interfaces"
+import { movie } from "../../_misc/interfaces"
 import { Link } from "react-router-dom"
-import styles from "./SingleSlide.module.scss"
+import styles from "./SingleGridMovie.module.scss"
 
 
 interface propsIntF {
@@ -8,8 +8,7 @@ interface propsIntF {
 	className?: string,
 }
 
-const SingleSlide = ({ movie, className = '' }: propsIntF) => {
-
+const SingleGridMovie = ({ movie, className }: propsIntF) => {
 	return (
 		<div className={ className }>
 			<Link to={ `/movie/${ movie.watchLink }` } className={ styles.link }>
@@ -25,4 +24,4 @@ const SingleSlide = ({ movie, className = '' }: propsIntF) => {
 	)
 }
 
-export default SingleSlide
+export default SingleGridMovie

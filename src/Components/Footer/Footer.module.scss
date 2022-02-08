@@ -1,0 +1,45 @@
+@import "../../_scssPartials/mixins/mixins";
+
+.footer {
+    @include displayFlex(column, space-between);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--theme-text-color);
+    background-color: var(--theme-main-color_1);
+    padding-top: 30px;
+
+    & ul {
+        @include displayFlex(column, space-between);
+        height: 170px;
+        padding-left: 0;
+        color: var(--theme-subtext-color);
+
+        & > li {
+            list-style: none;
+        }
+    }
+}
+
+.socialIcons {
+    color: var(--theme-subtext-color);
+    font-size: 30px;
+    margin-right: 25px;
+
+    &:hover {
+        color: var(--theme-text-color)
+    }
+}
+
+.socialSection {
+    color: var(--theme-subtext-color);
+    @include displayFlex(row, initial, center);
+
+    & > h3 {
+        margin: 0 30px 0 0;
+    }
+
+    border-bottom: 1px solid #1f1f1f;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}

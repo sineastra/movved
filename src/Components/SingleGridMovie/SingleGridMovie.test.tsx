@@ -1,6 +1,6 @@
-import { movie } from "../../../_misc/interfaces"
+import { movie } from "../../_misc/interfaces"
 import { BrowserRouter } from "react-router-dom"
-import SingleSlide from "./SingleSlide"
+import SingleGridMovie from "./SingleGridMovie"
 import renderer from "react-test-renderer"
 
 
@@ -19,7 +19,7 @@ const mockedMovie: movie = {
 const renderScreen = (movie: movie) =>
 	renderer.create(
 		<BrowserRouter>
-			<SingleSlide movie={ movie }/>
+			<SingleGridMovie movie={ movie }/>
 		</BrowserRouter>,
 	).toJSON()
 

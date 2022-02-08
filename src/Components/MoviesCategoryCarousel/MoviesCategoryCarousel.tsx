@@ -1,7 +1,7 @@
 import styles from "./MoviesCategoryCarousel.module.scss"
 import { movie } from "../../_misc/interfaces"
 import Carousel from 'nuka-carousel'
-import SingleSlide from "./SingleSlide/SingleSlide"
+import SingleGridMovie from "../SingleGridMovie/SingleGridMovie"
 
 
 interface props {
@@ -30,7 +30,7 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 				slidesToScroll={ "auto" }
 
 			>
-				{ movies.map(x => <SingleSlide className={ styles.slide } movie={ x } key={ x._id }/>) }
+				{ movies.map(x => <SingleGridMovie className={ styles.slide } movie={ x } key={ x._id }/>) }
 			</Carousel>
 		</div>
 	)
