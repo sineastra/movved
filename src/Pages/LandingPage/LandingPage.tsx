@@ -14,28 +14,48 @@ const mockedData: slideIntF[] = [
 
 const mockedMovies: movie[] = [
 	{
+		_id: '0',
 		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/8d1de36b28288851826469c3de3d8e14.jpg',
+		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		isSubbed: true,
+		isDubbed: true,
+		year: 1992,
+		watchLink: 'a',
+		engTitle: 'eng',
+		genre: 'film',
 	},
 	{
+		_id: '1',
 		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/ca8ce1a203b820792ebb6049fbb157aa.jpg',
+		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		isSubbed: false,
+		isDubbed: true,
+		year: 2022,
+		watchLink: 'a',
+		engTitle: 'eng',
+		genre: 'film',
 	},
 	{
+		_id: '2',
 		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/8d1de36b28288851826469c3de3d8e14.jpg',
+		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		isSubbed: true,
+		isDubbed: false,
+		year: 1992,
+		watchLink: 'a',
+		engTitle: 'eng',
+		genre: 'film',
 	},
 	{
+		_id: '3',
 		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/ca8ce1a203b820792ebb6049fbb157aa.jpg',
-	},
-	{
-		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/8d1de36b28288851826469c3de3d8e14.jpg',
-	},
-	{
-		title: 'Pesho',
-		poster: 'https://envymovies.com/wp-content/uploads/2022/01/ca8ce1a203b820792ebb6049fbb157aa.jpg',
+		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		isSubbed: false,
+		isDubbed: true,
+		year: 2022,
+		watchLink: 'a',
+		engTitle: 'eng',
+		genre: 'film',
 	},
 ]
 
@@ -44,6 +64,7 @@ const LandingPage = () => {
 		<>
 			<LandingPageCarousel slides={ mockedData }/>
 			<div className={ styles.categoriesWrapper }>
+				<h2>Нашите предложения</h2>
 				<MoviesCategoryCarousel movies={ mockedMovies }/>
 			</div>
 		</>

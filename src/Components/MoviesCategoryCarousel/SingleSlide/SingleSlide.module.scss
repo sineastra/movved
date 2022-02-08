@@ -1,0 +1,60 @@
+@import "../localMixins";
+@import "../../../_scssPartials/mixins/mixins";
+
+$span-width: 32px;
+
+.slide {
+    @include slide-width-height;
+}
+
+a.link {
+    @include slide-width-height;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: var(--theme-text-color);
+
+    & > span {
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: $span-width;
+        height: 25px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: var(--theme-text-color);
+        font-size: 0.7rem;
+        font-family: 'Monda', sans-serif;
+
+        &:nth-of-type(2) {
+            right: 5px;
+            top: 5px;
+        }
+
+        &:nth-of-type(3) {
+            right: $span-width + 10;
+            top: 5px;
+        }
+
+        &:first-of-type {
+            left: 5px;
+            top: 5px;
+        }
+    }
+
+    & > h4, h5 {
+        margin: 0;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        color: lightgray;
+        font-family: 'Monda', sans-serif;
+    }
+
+    & > h5 {
+        color: gray;
+    }
+}

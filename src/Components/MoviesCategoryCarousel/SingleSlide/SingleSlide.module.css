@@ -1,0 +1,53 @@
+.slide {
+  width: 200px;
+  height: 300px;
+}
+
+a.link {
+  width: 200px;
+  height: 300px;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: var(--theme-text-color);
+}
+a.link > span {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 32px;
+  height: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--theme-text-color);
+  font-size: 0.7rem;
+  font-family: "Monda", sans-serif;
+}
+a.link > span:nth-of-type(2) {
+  right: 5px;
+  top: 5px;
+}
+a.link > span:nth-of-type(3) {
+  right: 42px;
+  top: 5px;
+}
+a.link > span:first-of-type {
+  left: 5px;
+  top: 5px;
+}
+a.link > h4, a.link h5 {
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: lightgray;
+  font-family: "Monda", sans-serif;
+}
+a.link > h5 {
+  color: gray;
+}
+
+/*# sourceMappingURL=SingleSlide.module.css.map */

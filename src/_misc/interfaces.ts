@@ -6,7 +6,14 @@ export interface signedUserInfoInterface {
 }
 
 export interface movie {
+	_id: string,
 	title: string,
+	engTitle: string,
+	genre: string,
 	poster: string,
+	isSubbed: boolean,
+	isDubbed: boolean,
+	year: number,
+	watchLink: string
 }
 

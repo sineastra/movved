@@ -3,10 +3,9 @@
   justify-content: center;
 }
 
-.image {
-  width: 100px;
+.slide {
+  width: 200px;
   height: 300px;
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=MoviesCategoryCarousel.module.css.map */

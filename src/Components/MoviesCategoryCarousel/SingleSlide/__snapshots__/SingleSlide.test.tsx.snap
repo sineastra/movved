@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`---> Testing Single Slide of Movies Category Carousel renders correctly when isSubbed and/or isDubbed are NOT present (snapshot testing) 1`] = `
+<div
+  className=""
+>
+  <a
+    className="link"
+    href="/movie/c"
+    onClick={[Function]}
+  >
+    <span
+      className="yearSpan"
+    >
+      0
+    </span>
+    <img
+      alt="poster"
+      className="slide"
+      src="b"
+    />
+    <h4
+      role="title"
+    >
+      a
+    </h4>
+    <h5
+      role="eng-title"
+    >
+      d
+    </h5>
+    <h5
+      role="genre"
+    >
+      e
+    </h5>
+  </a>
+</div>
+`;
+
+exports[`---> Testing Single Slide of Movies Category Carousel renders correctly when isSubbed and/or isDubbed are present (snapshot testing) 1`] = `
+<div
+  className=""
+>
+  <a
+    className="link"
+    href="/movie/c"
+    onClick={[Function]}
+  >
+    <span
+      className="yearSpan"
+    >
+      0
+    </span>
+    <span
+      className="subSpan"
+    >
+      Dub
+    </span>
+    <span
+      className="dubSpan"
+    >
+      Sub
+    </span>
+    <img
+      alt="poster"
+      className="slide"
+      src="b"
+    />
+    <h4
+      role="title"
+    >
+      a
+    </h4>
+    <h5
+      role="eng-title"
+    >
+      d
+    </h5>
+    <h5
+      role="genre"
+    >
+      e
+    </h5>
+  </a>
+</div>
+`;

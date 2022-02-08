@@ -13,7 +13,7 @@
     font-family: 'Nunito', sans-serif;
     font-size: calc(12px + 1.5vmin);
     color: var(--theme-text-color);
-    background-color: var(--theme-main-color);
+    background-color: var(--theme-main-color_1);
     @include displayFlex(column, space-between, flex-start, auto,);
 
     & > a {
@@ -45,7 +45,7 @@
         height: 160px;
         position: absolute;
         background: var(--theme-misc-color-1);
-        border: 1px solid var(--theme-main-color);
+        border: 1px solid var(--theme-main-color_1);
         padding: 10px;
         border-radius: 5px;
         top: 90%;
@@ -60,12 +60,12 @@
 
         & > hr {
             width: 100%;
-            border-color: var(--theme-main-color);
+            border-color: var(--theme-main-color_1);
         }
 
         & > a {
             text-decoration: none;
-            color: var(--theme-main-color);
+            color: var(--theme-main-color_1);
         }
     }
 }

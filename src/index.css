@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&family=Nunito&display=swap');
 
 :root {
-    --theme-main-color: black;
+    --theme-main-color_1: black;
+    --theme-main-color_2: #1f1f1f;
     --theme-secondary-color: orange;
     --theme-misc-color-1: white;
     --theme-text-color: white;
+}
+
+body {
+    background-color: var(--theme-main-color_2);
+    color: var(--theme-text-color);
 }

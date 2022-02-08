@@ -1,5 +1,9 @@
 .categoriesWrapper {
   margin-top: 50px;
 }
+.categoriesWrapper > h2 {
+  padding-left: 4%;
+  font-family: "Nunito", sans-serif;
+}
 
 /*# sourceMappingURL=LandingPage.module.css.map */

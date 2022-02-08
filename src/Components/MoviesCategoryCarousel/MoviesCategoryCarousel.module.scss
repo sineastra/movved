@@ -1,11 +1,11 @@
+@import "./localMixins";
+
 .carouselWrapper {
     display: flex;
     justify-content: center;
 
 }
 
-.image {
-    width: 100px;
-    height: 300px;
-    object-fit: cover;
+.slide {
+   @include slide-width-height;
 }
