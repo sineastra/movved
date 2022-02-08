@@ -13,12 +13,13 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 		<div className={ styles.carouselWrapper }>
 			<Carousel
 				slideWidth={ '200px' }
-				cellSpacing={ 10 }
+				cellSpacing={ 20 }
 				height={ '370px' }
 				width={ '90%' }
 				className={ styles.carousel }
 				defaultControlsConfig={
 					{
+						containerClassName: styles.container,
 						nextButtonText: ">",
 						nextButtonStyle: { marginRight: '5px' },
 						prevButtonText: "<",

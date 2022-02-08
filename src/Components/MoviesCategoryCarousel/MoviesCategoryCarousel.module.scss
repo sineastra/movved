@@ -9,3 +9,7 @@
 .slide {
    @include slide-width-height;
 }
+
+.container {
+    height: 100px;
+}

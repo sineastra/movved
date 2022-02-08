@@ -1,34 +1,38 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: initial;
-  align-content: initial;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "Nunito", sans-serif;
   color: var(--theme-text-color);
+  font-family: "Nunito", sans-serif;
   background-color: var(--theme-main-color_1);
-  padding-top: 30px;
-}
-.footer ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: initial;
   align-content: initial;
+}
+.footer ul {
   height: 170px;
   padding-left: 0;
   color: var(--theme-subtext-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: initial;
+  align-content: initial;
 }
 .footer ul > li {
   list-style: none;
 }
+.footer a {
+  text-decoration: none;
+  color: var(--theme-subtext-color);
+}
 
 .socialIcons {
-  color: var(--theme-subtext-color);
   font-size: 30px;
   margin-right: 25px;
+  color: var(--theme-subtext-color);
 }
 .socialIcons:hover {
   color: var(--theme-text-color);
@@ -41,12 +45,36 @@
   justify-content: initial;
   align-items: center;
   align-content: initial;
-  border-bottom: 1px solid #1f1f1f;
   padding-bottom: 25px;
   margin-bottom: 10px;
+  border-bottom: 1px solid #1f1f1f;
 }
 .socialSection > h3 {
   margin: 0 30px 0 0;
+}
+
+.mainLogoSection {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.mainLogoSection > span {
+  font-family: "Nunito", sans-serif;
+  color: var(--theme-subtext-color);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.mainLogoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-top: 1px solid #1f1f1f;
+}
+.mainLogoWrapper > a {
+  color: var(--theme-secondary-color);
+  width: 150px;
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

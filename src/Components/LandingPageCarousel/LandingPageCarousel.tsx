@@ -12,7 +12,7 @@ interface propsIntF {
 const LandingPageCarousel = ({ slides }: propsIntF) => {
 
 	return (
-		<div >
+		<div className={ styles.carouselWrapper }>
 			<Carousel
 				autoPlay={ true }
 				interval={ 4000 }
@@ -20,6 +20,8 @@ const LandingPageCarousel = ({ slides }: propsIntF) => {
 				labels={ { leftArrow: 'Previous Movie', rightArrow: 'Next Movie', item: 'Watch' } }
 				showThumbs={ false }
 				dynamicHeight={ true }
+				showStatus={ false }
+				showIndicators={ false }
 			>
 				{ slides.map(x => <SingleSlide image={ x.image } link={ x.link } key={ x.image }/>) }
 			</Carousel>
