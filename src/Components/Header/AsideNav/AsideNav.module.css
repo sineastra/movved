@@ -1,0 +1,118 @@
+.mainWrapper {
+  height: 300px;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  padding: 25px 25px;
+  z-index: 3;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-size: calc(12px + 1.5vmin);
+  color: var(--theme-text-color);
+  background-color: var(--theme-main-color_1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: auto;
+}
+.mainWrapper > a {
+  height: 25%;
+  text-align: start;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--theme-text-color);
+}
+.mainWrapper > a:hover {
+  color: var(--theme-secondary-color);
+}
+.mainWrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  height: 300px;
+}
+
+.userNavLinkWrapper {
+  height: 25%;
+  text-align: start;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--theme-text-color);
+  position: relative;
+  cursor: pointer;
+}
+.userNavLinkWrapper:hover {
+  color: var(--theme-secondary-color);
+}
+.userNavLinkWrapper > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: center;
+  align-content: initial;
+}
+.userNavLinkWrapper > div:first-of-type > * {
+  padding-right: 5px;
+}
+.userNavLinkWrapper > div:nth-of-type(2) {
+  height: 160px;
+  position: absolute;
+  background: var(--theme-misc-color-1);
+  border: 1px solid var(--theme-main-color_1);
+  padding: 10px;
+  border-radius: 5px;
+  top: 90%;
+  left: 0;
+  z-index: 3;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: initial;
+  align-content: initial;
+}
+.userNavLinkWrapper > div:nth-of-type(2) > div {
+  color: var(--theme-secondary-color);
+}
+.userNavLinkWrapper > div:nth-of-type(2) > hr {
+  width: 100%;
+  border-color: var(--theme-main-color_1);
+}
+.userNavLinkWrapper > div:nth-of-type(2) > a {
+  text-decoration: none;
+  color: var(--theme-main-color_1);
+}
+
+.profilePicWrapper {
+  color: var(--theme-text-color);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+}
+
+.loggedOffUser {
+  height: 25%;
+  text-align: start;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--theme-text-color);
+  color: var(--theme-secondary-color);
+  text-decoration: underline;
+}
+.loggedOffUser:hover {
+  color: var(--theme-secondary-color);
+}
+
+/*# sourceMappingURL=AsideNav.module.css.map */

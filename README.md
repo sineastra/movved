@@ -6,8 +6,7 @@
 
 - ReactJS (create-react-app)
 - Redux (redux toolkit)
-- TypeScript (because I LOVE it)
+- Typescript (because I like it)
 - Next JS (because why not, got enough of Express JS atm.)
 - CSS Grids (grids seem cool and powerful.)
 - SCSS
-- .... others

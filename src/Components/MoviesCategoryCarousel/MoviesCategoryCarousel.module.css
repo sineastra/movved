@@ -1,0 +1,11 @@
+.carouselWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  width: 200px;
+  height: 300px;
+}
+
+/*# sourceMappingURL=MoviesCategoryCarousel.module.css.map */

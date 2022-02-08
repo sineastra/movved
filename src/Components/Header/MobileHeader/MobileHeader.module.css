@@ -1,0 +1,49 @@
+.mainWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.mainLogoWrapper {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.mainLogoWrapper > a {
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  color: var(--theme-secondary-color);
+  fill: currentColor;
+}
+
+.toggleAsideNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--theme-secondary-color);
+  cursor: pointer;
+  width: 60px;
+  height: 50px;
+}
+
+.barsIcon {
+  height: 60%;
+}
+
+@media screen and (max-width: 480px) {
+  form.searchInput {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=MobileHeader.module.css.map */

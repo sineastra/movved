@@ -1,0 +1,84 @@
+@import "../../../_scssPartials/mixins/mixins";
+@import "../_misc/localVariables";
+@import "../_misc/localMixins";
+
+
+.mainWrapper {
+    height: $aside-nav-height;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    padding: 25px 25px;
+    z-index: 3;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(12px + 1.5vmin);
+    color: var(--theme-text-color);
+    background-color: var(--theme-main-color_1);
+    @include displayFlex(column, space-between, flex-start, auto,);
+
+    & > a {
+        @include aside-nav-link;
+    }
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-out;
+        height: $aside-nav-height;
+    }
+}
+
+.userNavLinkWrapper {
+    @include aside-nav-link;
+    position: relative;
+    cursor: pointer;
+
+    & > div:first-of-type {
+        @include displayFlex(row, initial, center);
+
+        & > * {
+            padding-right: 5px;
+        }
+    }
+
+    & > div:nth-of-type(2) {
+        height: 160px;
+        position: absolute;
+        background: var(--theme-misc-color-1);
+        border: 1px solid var(--theme-main-color_1);
+        padding: 10px;
+        border-radius: 5px;
+        top: 90%;
+        left: 0;
+        z-index: 3;
+        white-space: nowrap;
+        @include displayFlex(column, space-between);
+
+        & > div {
+            color: var(--theme-secondary-color);
+        }
+
+        & > hr {
+            width: 100%;
+            border-color: var(--theme-main-color_1);
+        }
+
+        & > a {
+            text-decoration: none;
+            color: var(--theme-main-color_1);
+        }
+    }
+}
+
+.profilePicWrapper {
+    color: var(--theme-text-color);
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+}
+
+.loggedOffUser {
+    @include aside-nav-link;
+    color: var(--theme-secondary-color);
+    text-decoration: underline;
+}

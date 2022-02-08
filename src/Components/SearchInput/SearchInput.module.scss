@@ -1,0 +1,41 @@
+@import "../../_scssPartials/mixins/mixins";
+
+.formElement {
+    width: 200px;
+    height: 50px;
+}
+
+.searchIconWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include centeredFlex;
+
+}
+
+.searchInputWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include centeredFlex;
+}
+
+.searchIcon {
+    position: absolute;
+    height: 100%;
+    left: 10px;
+    top: 0;
+    z-index: 1;
+    font-size: 1.1em;
+    color: gray;
+}
+
+.searchInput {
+    width: 100%;
+    text-indent: 30px;
+    border: 2px solid var(--theme-secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
