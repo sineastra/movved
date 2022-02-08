@@ -1,4 +1,4 @@
-<h1>Movved is an app for watching movies. That's it. It is in progress...</h1>
+<h1>Movved is an app for watching movies online. That's it. It is in progress...</h1>
 
 <h2>The development of this app will be: Test Driven, Mobile First</h2>
 
@@ -6,7 +6,7 @@
 
 - ReactJS (create-react-app)
 - Redux (redux toolkit)
-- Typescript (because I like it)
+- TypeScript (because I LOVE IT)
 - Next JS (because why not, got enough of Express JS atm.)
-- CSS Grids (grids seem cool and powerful.)
+- CSS Grids (maybe, if opportunity arises...)
 - SCSS
