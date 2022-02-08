@@ -23,7 +23,7 @@ describe("---> Testing the landing page carousel", () => {
 		const slideImages = screen.getAllByRole('img')
 		const slideLinks = screen.getAllByRole('link')
 
-		// The Property Infinite Scrolling on the Carousel doubles the number of the slides.
+		// The Property Infinite Scrolling on this Carousel doubles the number of the slides.
 		// So for this test they must be 2 (mockedSlidesData length), but doubled === 4
 
 		expect(slideImages.length).toBe(4)

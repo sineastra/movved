@@ -1,7 +1,10 @@
-@import "../MoviesCategoryCarousel/localMixins";
 @import "../../_scssPartials/mixins/mixins";
 
 $span-width: 32px;
+@mixin slide-width-height {
+    width: 200px;
+    height: 300px;
+}
 
 .slide {
     @include slide-width-height;
