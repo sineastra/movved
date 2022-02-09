@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`---> Snapshot test of BigMoviePoster should render properly 1`] = `
+<section
+  className="posterWrapper"
+>
+  <img
+    alt="big-poster"
+    src="c"
+  />
+  <h1>
+    a
+  </h1>
+  <h4>
+    e
+  </h4>
+</section>
+`;

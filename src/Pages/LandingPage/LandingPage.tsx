@@ -16,7 +16,8 @@ const mockedMovies: movie[] = [
 	{
 		_id: '0',
 		title: 'Pesho',
-		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
 		isSubbed: true,
 		isDubbed: true,
 		year: 1992,
@@ -27,7 +28,8 @@ const mockedMovies: movie[] = [
 	{
 		_id: '1',
 		title: 'Pesho',
-		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
 		isSubbed: false,
 		isDubbed: true,
 		year: 2022,
@@ -38,7 +40,8 @@ const mockedMovies: movie[] = [
 	{
 		_id: '2',
 		title: 'Pesho',
-		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
 		isSubbed: true,
 		isDubbed: false,
 		year: 1992,
@@ -49,7 +52,8 @@ const mockedMovies: movie[] = [
 	{
 		_id: '3',
 		title: 'Pesho',
-		poster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+		bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
 		isSubbed: false,
 		isDubbed: true,
 		year: 2022,

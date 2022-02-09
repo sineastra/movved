@@ -7,13 +7,14 @@ import renderer from "react-test-renderer"
 const mockedMovie: movie = {
 	_id: '0',
 	title: 'a',
-	poster: 'b',
+	smallPoster: 'b',
+	bigPoster: 'c',
 	isSubbed: true,
 	isDubbed: true,
 	year: 0,
-	watchLink: 'c',
-	engTitle: 'd',
-	genre: 'e',
+	watchLink: 'd',
+	engTitle: 'e',
+	genre: 'f',
 }
 
 const renderScreen = (movie: movie) =>

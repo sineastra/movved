@@ -15,7 +15,7 @@ const SingleGridMovie = ({ movie, className }: propsIntF) => {
 				<span className={ styles.yearSpan }>{ movie.year }</span>
 				{ movie.isDubbed && <span className={ styles.subSpan }>Dub</span> }
 				{ movie.isSubbed && <span className={ styles.dubSpan }>Sub</span> }
-				<img src={ movie.poster } alt="poster" className={ styles.slide }/>
+				<img src={ movie.smallPoster } alt="poster" className={ styles.slide }/>
 				<h4 role="title">{ movie.title }</h4>
 				<h5 role="eng-title">{ movie.engTitle }</h5>
 				<h5 role="genre">{ movie.genre }</h5>
