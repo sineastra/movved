@@ -37,20 +37,47 @@
 .socialIcons:hover {
   color: var(--theme-text-color);
 }
+@media screen and (max-width: 320px) {
+  .socialIcons {
+    font-size: 10vw;
+    margin-right: 10px;
+  }
+}
 
 .socialSection {
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #1f1f1f;
   color: var(--theme-subtext-color);
   display: flex;
   flex-direction: row;
   justify-content: initial;
   align-items: center;
   align-content: initial;
-  padding-bottom: 25px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #1f1f1f;
 }
 .socialSection > h3 {
   margin: 0 30px 0 0;
+}
+@media screen and (max-width: 480px) {
+  .socialSection > h3 {
+    margin: 0 0 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .socialSection > h3 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .socialSection {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: initial;
+    align-content: initial;
+  }
 }
 
 .mainLogoSection {
@@ -58,10 +85,10 @@
   margin-bottom: 20px;
 }
 .mainLogoSection > span {
-  font-family: "Nunito", sans-serif;
-  color: var(--theme-subtext-color);
   font-size: 0.8rem;
   font-style: italic;
+  color: var(--theme-subtext-color);
+  font-family: "Nunito", sans-serif;
 }
 
 .mainLogoWrapper {
@@ -73,8 +100,8 @@
   border-top: 1px solid #1f1f1f;
 }
 .mainLogoWrapper > a {
-  color: var(--theme-secondary-color);
   width: 150px;
+  color: var(--theme-secondary-color);
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

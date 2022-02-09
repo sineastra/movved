@@ -24,8 +24,6 @@ const MovieDetails = () => {
 			<BigMoviePosterTest movie={ mockedMovie }/>
 			<section className={ styles.content }>
 				<div>
-				</div>
-				<div>
 					<FaPlayCircle/>
 					<button>Гледай</button>
 				</div>

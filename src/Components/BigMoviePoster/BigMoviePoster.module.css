@@ -1,3 +1,40 @@
-
+.posterWrapper {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+}
+.posterWrapper > img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+.posterWrapper::after {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  content: "";
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.8) 51.04%, #1c1c1c 72.92%, #141414);
+}
+.posterWrapper .headingsWrapper {
+  bottom: 0;
+  z-index: 2;
+  left: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: initial;
+  align-content: initial;
+}
+.posterWrapper .headingsWrapper > h2, .posterWrapper .headingsWrapper h4 {
+  margin: 0 0 5px;
+  font-family: "Comfortaa", cursive;
+}
+.posterWrapper .headingsWrapper > h4 {
+  color: var(--theme-subtext-color);
+}
 
 /*# sourceMappingURL=BigMoviePoster.module.css.map */

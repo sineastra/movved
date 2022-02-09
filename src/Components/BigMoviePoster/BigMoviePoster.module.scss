@@ -1,0 +1,42 @@
+@import "../../_scssPartials/mixins/mixins";
+
+.posterWrapper {
+    width: 100vw;
+    height: 300px;
+    position: relative;
+
+    & > img {
+        width: 100vw;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    &::after {
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        content: "";
+        width: 100vw;
+        height: 100px;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, .8) 51.04%, rgba(28, 28, 28, 1) 72.92%, #141414);
+    }
+
+    & .headingsWrapper {
+        bottom: 0;
+        z-index: 2;
+        left: 10px;
+        position: absolute;
+        @include displayFlex(column, center);
+
+        & > h2, h4 {
+            margin: 0 0 5px;
+            font-family: 'Comfortaa', cursive;
+        }
+
+        & > h4 {
+            color: var(--theme-subtext-color);
+        }
+    }
+
+}

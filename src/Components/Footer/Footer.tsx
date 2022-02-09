@@ -11,12 +11,14 @@ const Footer = () => {
 		<footer className={ styles.footer }>
 			<section className={ styles.socialSection }>
 				<h3>Последвайте ни: </h3>
-				<IconContext.Provider value={ { className: styles.socialIcons } }>
-					<a href="https://facebook.com"><FaFacebook/></a>
-					<a href="https://instagram.com"><FaInstagram/></a>
-					<a href="https://twitter.com"><FaTwitter/></a>
-					<a href="https://linkedin.com"><FaLinkedinIn/></a>
-				</IconContext.Provider>
+				<div className={ styles.iconsWrapper }>
+					<IconContext.Provider value={ { className: styles.socialIcons } }>
+						<a href="https://facebook.com"><FaFacebook/></a>
+						<a href="https://instagram.com"><FaInstagram/></a>
+						<a href="https://twitter.com"><FaTwitter/></a>
+						<a href="https://linkedin.com"><FaLinkedinIn/></a>
+					</IconContext.Provider>
+				</div>
 			</section>
 			<section>
 				<h3>Избрани жанрове</h3>

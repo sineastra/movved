@@ -1,28 +1,4 @@
 .wrapper {
-    & .posterWrapper {
-        width: 100vw;
-        height: 300px;
-        position: relative;
-
-        & > img {
-            width: 100vw;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 100px;
-            width: 100vw;
-            z-index: 1;
-            background: linear-gradient(180deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, .8) 51.04%, rgba(28, 28, 28, 1) 72.92%, #141414);
-        }
-
-    }
-
     & .content {
         background-color: var(--theme-main-color_2);
     }

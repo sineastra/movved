@@ -8,11 +8,15 @@ exports[`---> Snapshot test of BigMoviePoster should render properly 1`] = `
     alt="big-poster"
     src="c"
   />
-  <h1>
-    a
-  </h1>
-  <h4>
-    e
-  </h4>
+  <div
+    className="headingsWrapper"
+  >
+    <h2>
+      a
+    </h2>
+    <h4>
+      e
+    </h4>
+  </div>
 </section>
 `;
