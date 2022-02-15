@@ -1,0 +1,25 @@
+.miscBtnsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 5px 10px;
+}
+
+.iconsClassName {
+  font-size: 1.5rem;
+}
+
+.hiddenModal {
+  margin-top: -315px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.visibleModal {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+/*# sourceMappingURL=MiscBtnsPlayMovieGroup.module.css.map */

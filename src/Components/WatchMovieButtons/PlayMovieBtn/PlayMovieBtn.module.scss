@@ -1,0 +1,44 @@
+@import "../../../_scssPartials/mixins/mediaQueries";
+@import "../../../_scssPartials/mixins/mixins";
+
+.wrapper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    @include centeredFlex(column);
+    background-color: var(--theme-main-color_2);
+
+    @include mobile {
+        width: 95%;
+    }
+
+    & .btnWrapper {
+        width: 484px;
+        height: 64px;
+        border-radius: 5px;
+        @include centeredFlex(row);
+        background-color: var(--theme-secondary-color);
+
+        & .btn {
+            width: 100%;
+            border: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            vertical-align: middle;
+            @include centeredFlex();
+            color: var(--theme-text-color);
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--theme-secondary-color);
+        }
+
+        & .icon {
+            font-size: 1.8rem;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+
+    & .miscBtnsWrapper {
+
+    }
+}

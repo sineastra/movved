@@ -1,7 +1,8 @@
 import styles from "./MovieDetails.module.scss"
-import { FaPlayCircle } from "react-icons/fa"
 import BigMoviePosterTest from "../../Components/BigMoviePoster/BigMoviePoster"
 import bigPoster from "../../assets/exampleMoviePoster.jpg"
+import WatchMovieButtons from "../../Components/WatchMovieButtons/WatchMovieButtons"
+import { signedUserInfoInterface } from "../../_misc/interfaces"
 
 
 const mockedMovie = {
@@ -14,7 +15,18 @@ const mockedMovie = {
 	year: 1992,
 	watchLink: 'd',
 	engTitle: 'Bad Movie',
-	genre: 'Peshovizum',
+	genres: ['a'],
+	trailerLink: 'https://www.youtube.com/embed/RX7TA3ezjHc',
+	comments: {
+		user: {
+			name: 'a',
+			email: 'a',
+			password: 'a',
+			profilePic: 'a',
+		}, comment: 'comment',
+	},
+	actors: ['a', 'b'],
+	director: 'a',
 }
 
 const MovieDetails = () => {
@@ -22,12 +34,7 @@ const MovieDetails = () => {
 	return (
 		<div className={ styles.wrapper }>
 			<BigMoviePosterTest movie={ mockedMovie }/>
-			<section className={ styles.content }>
-				<div>
-					<FaPlayCircle/>
-					<button>Гледай</button>
-				</div>
-			</section>
+			<WatchMovieButtons movie={ mockedMovie }/>
 		</div>
 	)
 }

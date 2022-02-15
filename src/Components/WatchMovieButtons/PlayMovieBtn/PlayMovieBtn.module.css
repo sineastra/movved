@@ -1,0 +1,49 @@
+.wrapper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--theme-main-color_2);
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+.wrapper .btnWrapper {
+  width: 484px;
+  height: 64px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--theme-secondary-color);
+}
+.wrapper .btnWrapper .btn {
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--theme-text-color);
+  font-family: "Nunito", sans-serif;
+  background-color: var(--theme-secondary-color);
+}
+.wrapper .btnWrapper .icon {
+  font-size: 1.8rem;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=PlayMovieBtn.module.css.map */

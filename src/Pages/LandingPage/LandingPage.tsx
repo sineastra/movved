@@ -23,7 +23,18 @@ const mockedMovies: movie[] = [
 		year: 1992,
 		watchLink: 'a',
 		engTitle: 'eng',
-		genre: 'film',
+		genres: ['film'],
+		trailerLink: 'a',
+		comments: {
+			user: {
+				name: 'a',
+				email: 'a',
+				password: 'a',
+				profilePic: 'a',
+			}, comment: 'comment',
+		},
+		actors: ['a', 'b'],
+		director: 'a',
 	},
 	{
 		_id: '1',
@@ -35,7 +46,18 @@ const mockedMovies: movie[] = [
 		year: 2022,
 		watchLink: 'a',
 		engTitle: 'eng',
-		genre: 'film',
+		genres: ['film'],
+		trailerLink: 'a',
+		comments: {
+			user: {
+				name: 'a',
+				email: 'a',
+				password: 'a',
+				profilePic: 'a',
+			}, comment: 'comment',
+		},
+		actors: ['a', 'b'],
+		director: 'a',
 	},
 	{
 		_id: '2',
@@ -47,7 +69,18 @@ const mockedMovies: movie[] = [
 		year: 1992,
 		watchLink: 'a',
 		engTitle: 'eng',
-		genre: 'film',
+		genres: ['film'],
+		trailerLink: 'a',
+		comments: {
+			user: {
+				name: 'a',
+				email: 'a',
+				password: 'a',
+				profilePic: 'a',
+			}, comment: 'comment',
+		},
+		actors: ['a', 'b'],
+		director: 'a',
 	},
 	{
 		_id: '3',
@@ -59,7 +92,18 @@ const mockedMovies: movie[] = [
 		year: 2022,
 		watchLink: 'a',
 		engTitle: 'eng',
-		genre: 'film',
+		genres: ['film'],
+		trailerLink: 'a',
+		comments: {
+			user: {
+				name: 'a',
+				email: 'a',
+				password: 'a',
+				profilePic: 'a',
+			}, comment: 'comment',
+		},
+		actors: ['a', 'b'],
+		director: 'a',
 	},
 ]
 

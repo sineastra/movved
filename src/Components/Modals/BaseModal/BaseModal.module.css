@@ -1,0 +1,66 @@
+.backdrop {
+  visibility: visible;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.backdrop.hiddenBackdrop {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.backdrop > .wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 5vw;
+  width: 90vw;
+  height: 400px;
+  z-index: 4;
+  background: var(--theme-main-color_2);
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+.backdrop > .wrapper.hiddenWrapper {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+.backdrop > .wrapper > .headingSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: initial;
+  padding: 15px;
+  vertical-align: middle;
+  font-family: "Nunito", sans-serif;
+}
+.backdrop > .wrapper > .headingSection > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.backdrop > .wrapper > .headingSection > h3 {
+  margin: 0;
+}
+.backdrop > .wrapper > hr {
+  width: 95%;
+}
+.backdrop > .wrapper > .contentSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 5px;
+}
+
+/*# sourceMappingURL=BaseModal.module.css.map */

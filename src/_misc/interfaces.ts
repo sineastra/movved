@@ -9,12 +9,16 @@ export interface movie {
 	_id: string,
 	title: string,
 	engTitle: string,
-	genre: string,
+	genres: string[],
 	smallPoster: string,
 	bigPoster: string,
 	isSubbed: boolean,
 	isDubbed: boolean,
 	year: number,
-	watchLink: string
+	watchLink: string,
+	trailerLink: string,
+	comments: { user: signedUserInfoInterface, comment: string },
+	actors: string[],
+	director: string,
 }
 

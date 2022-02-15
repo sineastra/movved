@@ -18,7 +18,7 @@ const SingleGridMovie = ({ movie, className }: propsIntF) => {
 				<img src={ movie.smallPoster } alt="poster" className={ styles.slide }/>
 				<h4 role="title">{ movie.title }</h4>
 				<h5 role="eng-title">{ movie.engTitle }</h5>
-				<h5 role="genre">{ movie.genre }</h5>
+				<h5 role="genre">{ movie.genres }</h5>
 			</Link>
 		</div>
 	)

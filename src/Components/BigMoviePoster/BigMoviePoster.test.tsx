@@ -13,7 +13,18 @@ const mockedMovie: movie = {
 	year: 0,
 	watchLink: 'd',
 	engTitle: 'e',
-	genre: 'f',
+	genres: ['f'],
+	trailerLink: 'a',
+	comments: {
+		user: {
+			name: 'a',
+			email: 'a',
+			password: 'a',
+			profilePic: 'a',
+		}, comment: 'comment',
+	},
+	actors: ['a', 'b'],
+	director: 'a',
 }
 
 describe("---> Snapshot test of BigMoviePoster", () => {
