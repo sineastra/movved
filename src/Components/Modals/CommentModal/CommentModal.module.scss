@@ -1,0 +1,33 @@
+@import "../../../_scssPartials/mixins/mixins";
+
+.wrapper {
+    width: 95%;
+    @include displayFlex(column, initial, center);
+
+    & > * {
+        width: 95%;
+    }
+
+    & > textarea {
+        height: 100px;
+        border-radius: 5px;
+        resize: none;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    & > hr {
+        border-color: var(--theme-secondary-color);
+    }
+
+    & > .commentWrapper {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.longerModal {
+    height: 500px !important;
+}

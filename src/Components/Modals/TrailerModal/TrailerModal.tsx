@@ -1,17 +1,18 @@
 import BaseModal from "../BaseModal/BaseModal"
-import { movie } from "../../../_misc/interfaces"
+import { movieInterface } from "../../../_misc/interfaces"
 import React from "react"
+import { BsCameraVideo } from "react-icons/bs"
 
 
 interface propsIntF {
-	movie: movie,
+	movie: movieInterface,
 	showModal: boolean,
 	setShowModal: (v: boolean) => void,
 }
 const TrailerModal: React.FC<propsIntF> = ({ movie, showModal, setShowModal }) => {
 
 	return (
-		<BaseModal heading="Trailer" showModal={ showModal } setShowModal={ setShowModal }>
+		<BaseModal heading="Trailer" showModal={ showModal } setShowModal={ setShowModal } icon={ <BsCameraVideo/> }>
 			<iframe style={ { width: "95%", height: "315px" } }
 			        src={ showModal ? movie.trailerLink : '' }
 			        title="Movie Trailer" frameBorder="0"

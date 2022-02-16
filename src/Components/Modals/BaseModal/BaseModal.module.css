@@ -25,6 +25,7 @@
   background: var(--theme-main-color_2);
   border-radius: 5px;
   transition: all 0.3s linear;
+  overflow-y: auto;
 }
 .backdrop > .wrapper.hiddenWrapper {
   opacity: 0;

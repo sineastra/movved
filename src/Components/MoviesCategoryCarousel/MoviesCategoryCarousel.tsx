@@ -1,11 +1,11 @@
 import styles from "./MoviesCategoryCarousel.module.scss"
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 import Carousel from 'nuka-carousel'
 import SingleGridMovie from "../SingleGridMovie/SingleGridMovie"
 
 
 interface props {
-	movies: movie[]
+	movies: movieInterface[]
 }
 
 const MoviesCategoryCarousel = ({ movies }: props) => {

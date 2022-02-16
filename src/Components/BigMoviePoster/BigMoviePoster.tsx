@@ -1,9 +1,9 @@
 import styles from "./BigMoviePoster.module.scss"
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 
 
 interface propsIntF {
-	movie: movie
+	movie: movieInterface
 }
 const BigMoviePosterTest = ({ movie }: propsIntF) => {
 	return (

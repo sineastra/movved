@@ -1,11 +1,11 @@
 import styles from "./WatchMovieButtons.module.scss"
 import PlayMovieBtn from "./PlayMovieBtn/PlayMovieBtn"
 import MiscBtnsPlayMovieGroup from "../MiscBtnsPlayMovieGroup/MiscBtnsPlayMovieGroup"
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 
 
 interface propsIntF {
-	movie: movie
+	movie: movieInterface
 }
 const WatchMovieButtons = ({ movie }: propsIntF) => {
 

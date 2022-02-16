@@ -1,9 +1,9 @@
 import renderer from "react-test-renderer"
 import BigMoviePoster from "./BigMoviePoster"
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 
 
-const mockedMovie: movie = {
+const mockedMovie: movieInterface = {
 	_id: '0',
 	title: 'a',
 	smallPoster: 'b',
@@ -15,14 +15,15 @@ const mockedMovie: movie = {
 	engTitle: 'e',
 	genres: ['f'],
 	trailerLink: 'a',
-	comments: {
+	comments: [{
+		_id: 'a',
 		user: {
 			name: 'a',
 			email: 'a',
 			password: 'a',
 			profilePic: 'a',
 		}, comment: 'comment',
-	},
+	}],
 	actors: ['a', 'b'],
 	director: 'a',
 }

@@ -19,14 +19,15 @@ const mockedMovie = {
 	engTitle: 'a',
 	genres: ['a'],
 	trailerLink: 'a',
-	comments: {
+	comments: [{
+		_id: 'a',
 		user: {
 			name: 'a',
 			email: 'a',
 			password: 'a',
 			profilePic: 'a',
 		}, comment: 'comment',
-	},
+	}],
 	actors: ['a', 'b'],
 	director: 'a',
 }
@@ -46,15 +47,15 @@ describe("---> testing MiscBtnsPlayMovieGroup modal openings on logged OUT user"
 		renderScreen()
 
 		const btn = screen.getByTitle(/watch trailer/i)
-		let modal = screen.queryByRole('dialog')
-		expect(modal).toBeNull()
+		let modal = screen.queryAllByRole('dialog')
+		expect(modal[0]).toHaveClass('hiddenBackdrop')
 
 		await user.click(btn)
 
-		modal = screen.getByRole('dialog')
+		modal = screen.getAllByRole('dialog')
 		const modalText = screen.getByText('Trailer')
 
-		expect(modal).not.toBeNull()
+		expect(modal[0]).not.toHaveClass('hiddenBackdrop')
 		expect(modalText).toBeInTheDocument()
 	})
 })

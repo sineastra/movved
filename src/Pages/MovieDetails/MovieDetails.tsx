@@ -17,14 +17,47 @@ const mockedMovie = {
 	engTitle: 'Bad Movie',
 	genres: ['a'],
 	trailerLink: 'https://www.youtube.com/embed/RX7TA3ezjHc',
-	comments: {
+	comments: [{
+		_id: 'a',
 		user: {
-			name: 'a',
+			name: 'pesho',
 			email: 'a',
 			password: 'a',
-			profilePic: 'a',
+			profilePic: null,
 		}, comment: 'comment',
-	},
+	}, {
+		_id: 'a',
+		user: {
+			name: 'pesho',
+			email: 'a',
+			password: 'a',
+			profilePic: null,
+		}, comment: 'comment',
+	}, {
+		_id: 'a',
+		user: {
+			name: 'pesho',
+			email: 'a',
+			password: 'a',
+			profilePic: null,
+		}, comment: 'comment',
+	}, {
+		_id: 'a',
+		user: {
+			name: 'pesho',
+			email: 'a',
+			password: 'a',
+			profilePic: null,
+		}, comment: 'comment',
+	}, {
+		_id: 'a',
+		user: {
+			name: 'pesho',
+			email: 'a',
+			password: 'a',
+			profilePic: null,
+		}, comment: 'comment',
+	}],
 	actors: ['a', 'b'],
 	director: 'a',
 }

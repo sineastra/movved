@@ -1,10 +1,10 @@
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 import { Link } from "react-router-dom"
 import styles from "./SingleGridMovie.module.scss"
 
 
 interface propsIntF {
-	movie: movie,
+	movie: movieInterface,
 	className?: string,
 }
 

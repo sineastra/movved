@@ -2,7 +2,7 @@ import LandingPageCarousel from "../../Components/LandingPageCarousel/LandingPag
 import image from "../../assets/tree-736885__480.jpeg"
 import { slideIntF } from "../../Components/LandingPageCarousel/_interfaces"
 import MoviesCategoryCarousel from "../../Components/MoviesCategoryCarousel/MoviesCategoryCarousel"
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 import styles from "./LandingPage.module.scss"
 
 
@@ -12,7 +12,7 @@ const mockedData: slideIntF[] = [
 	{ image, link: '#' },
 ]
 
-const mockedMovies: movie[] = [
+const mockedMovies: movieInterface[] = [
 	{
 		_id: '0',
 		title: 'Pesho',
@@ -25,14 +25,15 @@ const mockedMovies: movie[] = [
 		engTitle: 'eng',
 		genres: ['film'],
 		trailerLink: 'a',
-		comments: {
+		comments: [{
+			_id: 'a',
 			user: {
 				name: 'a',
 				email: 'a',
 				password: 'a',
 				profilePic: 'a',
 			}, comment: 'comment',
-		},
+		}],
 		actors: ['a', 'b'],
 		director: 'a',
 	},
@@ -48,14 +49,15 @@ const mockedMovies: movie[] = [
 		engTitle: 'eng',
 		genres: ['film'],
 		trailerLink: 'a',
-		comments: {
+		comments: [{
+			_id: 'a',
 			user: {
 				name: 'a',
 				email: 'a',
 				password: 'a',
 				profilePic: 'a',
 			}, comment: 'comment',
-		},
+		}],
 		actors: ['a', 'b'],
 		director: 'a',
 	},
@@ -71,14 +73,15 @@ const mockedMovies: movie[] = [
 		engTitle: 'eng',
 		genres: ['film'],
 		trailerLink: 'a',
-		comments: {
+		comments: [{
+			_id: 'a',
 			user: {
 				name: 'a',
 				email: 'a',
 				password: 'a',
 				profilePic: 'a',
 			}, comment: 'comment',
-		},
+		}],
 		actors: ['a', 'b'],
 		director: 'a',
 	},
@@ -94,14 +97,15 @@ const mockedMovies: movie[] = [
 		engTitle: 'eng',
 		genres: ['film'],
 		trailerLink: 'a',
-		comments: {
+		comments: [{
+			_id: 'a',
 			user: {
 				name: 'a',
 				email: 'a',
 				password: 'a',
 				profilePic: 'a',
 			}, comment: 'comment',
-		},
+		}],
 		actors: ['a', 'b'],
 		director: 'a',
 	},
@@ -109,7 +113,7 @@ const mockedMovies: movie[] = [
 
 interface singleCategoryPropsIntF {
 	title: string,
-	movies: movie[]
+	movies: movieInterface[]
 }
 const SingleCategory = ({ title, movies }: singleCategoryPropsIntF) => {
 	return (

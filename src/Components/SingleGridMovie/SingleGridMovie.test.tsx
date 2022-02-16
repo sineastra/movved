@@ -1,10 +1,10 @@
-import { movie } from "../../_misc/interfaces"
+import { movieInterface } from "../../_misc/interfaces"
 import { BrowserRouter } from "react-router-dom"
 import SingleGridMovie from "./SingleGridMovie"
 import renderer from "react-test-renderer"
 
 
-const mockedMovie: movie = {
+const mockedMovie: movieInterface = {
 	_id: '0',
 	title: 'a',
 	smallPoster: 'b',
@@ -16,19 +16,20 @@ const mockedMovie: movie = {
 	engTitle: 'e',
 	genres: ['f'],
 	trailerLink: 'a',
-	comments: {
+	comments: [{
+		_id: 'a',
 		user: {
 			name: 'a',
 			email: 'a',
 			password: 'a',
 			profilePic: 'a',
 		}, comment: 'comment',
-	},
+	}],
 	actors: ['a', 'b'],
 	director: 'a',
 }
 
-const renderScreen = (movie: movie) =>
+const renderScreen = (movie: movieInterface) =>
 	renderer.create(
 		<BrowserRouter>
 			<SingleGridMovie movie={ movie }/>
