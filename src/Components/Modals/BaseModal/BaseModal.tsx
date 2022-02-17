@@ -32,7 +32,8 @@ const BaseModal: React.FC<propsIntF> = ({ heading, showModal, setShowModal, chil
 						{ icon }
 						<h3>{ heading }</h3>
 						<div onClick={ () => setShowModal(false) }>
-							<RiCloseLine role="graphics-document" aria-label="close-modal"/>
+							<RiCloseLine role="graphics-document" aria-label="close-modal"
+							             style={ { cursor: "pointer" } }/>
 						</div>
 					</IconContext.Provider>
 				</section>

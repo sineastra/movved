@@ -1,5 +1,48 @@
+@import "../../_scssPartials/mixins/mixins";
+
 .wrapper {
-    & .content {
+    margin-bottom: 100px;
+    & > .content {
         background-color: var(--theme-main-color_2);
     }
+
+    & > .descriptionWrapper {
+        @include centeredFlex(column);
+        padding-left: 20px;
+        padding-right: 20px;
+
+        & > .genresWrapper {
+            @include displayFlex(row);
+            width: 100%;
+            margin-bottom: 30px;
+            color: var(--theme-subtext-color);
+
+            & > div:first-of-type {
+                margin-right: 10px;
+            }
+        }
+
+        & > article {
+            margin-bottom: 20px;
+            line-height: 25px;
+            font-style: italic;
+        }
+
+        & > .crewInfo {
+            width: 100%;
+            text-align: start;
+            margin-bottom: 5px;
+
+            & > .diffColor {
+                color: var(--theme-subtext-color);
+            }
+        }
+
+        & > hr {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
 }
+

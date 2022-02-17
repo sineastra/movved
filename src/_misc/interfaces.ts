@@ -27,5 +27,6 @@ export interface movieInterface {
 	comments: movieCommentIntF[],
 	actors: string[],
 	director: string,
+	description?: string,
 }
 

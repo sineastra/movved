@@ -21,7 +21,7 @@
 .posterWrapper .headingsWrapper {
   bottom: 0;
   z-index: 2;
-  left: 10px;
+  left: 20px;
   position: absolute;
   display: flex;
   flex-direction: column;

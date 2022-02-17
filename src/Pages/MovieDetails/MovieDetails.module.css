@@ -1,5 +1,47 @@
-.wrapper .content {
+.wrapper {
+  margin-bottom: 100px;
+}
+.wrapper > .content {
   background-color: var(--theme-main-color_2);
+}
+.wrapper > .descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.wrapper > .descriptionWrapper > .genresWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: initial;
+  align-content: initial;
+  width: 100%;
+  margin-bottom: 30px;
+  color: var(--theme-subtext-color);
+}
+.wrapper > .descriptionWrapper > .genresWrapper > div:first-of-type {
+  margin-right: 10px;
+}
+.wrapper > .descriptionWrapper > article {
+  margin-bottom: 20px;
+  line-height: 25px;
+  font-style: italic;
+}
+.wrapper > .descriptionWrapper > .crewInfo {
+  width: 100%;
+  text-align: start;
+  margin-bottom: 5px;
+}
+.wrapper > .descriptionWrapper > .crewInfo > .diffColor {
+  color: var(--theme-subtext-color);
+}
+.wrapper > .descriptionWrapper > hr {
+  width: 100%;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=MovieDetails.module.css.map */
