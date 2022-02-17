@@ -15,6 +15,7 @@ interface desktopPropsInterface {
 }
 
 const loggedUserMock: signedUserInfoInterface = {
+	_id: '1',
 	name: 'Pesho',
 	email: 'pesho@abv.bg',
 	password: 'sasho123',

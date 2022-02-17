@@ -18,6 +18,7 @@ const mockedMovie: movieInterface = {
 	comments: [{
 		_id: 'a',
 		user: {
+			_id: '1',
 			name: 'a',
 			email: 'a',
 			password: 'a',

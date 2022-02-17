@@ -33,7 +33,7 @@ describe("--> Testing BaseModal", () => {
 
 		await user.click(backdrop)
 
-		expect(setShowModal).toHaveBeenCalledTimes(1)
+		expect(setShowModal).toHaveBeenCalledWith(false)
 	})
 	it("does not call close modal callback on pressing the dialog window", async () => {
 		renderScreen()
@@ -49,6 +49,6 @@ describe("--> Testing BaseModal", () => {
 
 		await user.click(closeIcon)
 
-		expect(setShowModal).toHaveBeenCalledTimes(1)
+		expect(setShowModal).toHaveBeenCalledWith(false)
 	})
 })

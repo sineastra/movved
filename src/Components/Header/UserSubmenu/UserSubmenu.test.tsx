@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 import UserSubmenu from "./UserSubmenu"
 
 const loggedInUser: signedUserInfoInterface = {
+	_id: '1',
 	name: 'a',
 	email: 'a@a.a',
 	password: 'a',

@@ -1,6 +1,7 @@
 {
   "name": "movved",
   "jest": {
+    "resetMocks": false,
     "clearMocks": true
   },
   "version": "0.1.0",

@@ -3,17 +3,44 @@
 .wrapper {
     width: 95%;
     @include displayFlex(column, initial, center);
+    font-family: 'Nunito', sans-serif;
 
     & > * {
         width: 95%;
     }
 
-    & > textarea {
-        height: 100px;
-        border-radius: 5px;
-        resize: none;
-        padding: 10px;
-        margin-bottom: 10px;
+    & > form {
+        height: 130px;
+
+        & * {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        & > textarea {
+            height: 80px;
+            width: 100%;
+            resize: none;
+            padding: 10px;
+        }
+
+        & > .submitBtnWrapper {
+            text-align: end;
+
+            & > button {
+                padding: 5px;
+                color: var(--theme-secondary-color);
+                background: transparent;
+                border: 1px solid var(--theme-secondary-color);
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--theme-text-color);
+                    border: 1px solid var(--theme-secondary-color);
+                    background: var(--theme-secondary-color);
+                }
+            }
+        }
     }
 
     & > hr {

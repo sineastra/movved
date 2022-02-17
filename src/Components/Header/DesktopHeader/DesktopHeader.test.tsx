@@ -6,6 +6,7 @@ import { runAuthLinksTests, runAuthMenuToggleTest, runAuthSubmenuTests, runNavLi
 
 
 const loggedInUser: signedUserInfoInterface = {
+	_id: '1',
 	name: 'a',
 	email: 'a@a.a',
 	password: 'a',

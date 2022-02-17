@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom"
 
 
 const loggedInUser: signedUserInfoInterface = {
+	_id: '1',
 	name: 'a',
 	email: 'a@a.a',
 	password: 'a',

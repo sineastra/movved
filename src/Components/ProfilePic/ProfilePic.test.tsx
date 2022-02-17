@@ -13,6 +13,7 @@ const renderScreen = (user: signedUserInfoInterface | null) =>
 
 const getLoggedUser = (profilePic: string | null): signedUserInfoInterface | null => {
 	return {
+		_id: '1',
 		name: 'a',
 		email: 'a@a.a',
 		password: 'a',

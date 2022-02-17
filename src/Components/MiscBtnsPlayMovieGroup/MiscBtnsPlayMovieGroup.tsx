@@ -6,6 +6,7 @@ import TrailerModal from "../Modals/TrailerModal/TrailerModal"
 import { movieInterface } from "../../_misc/interfaces"
 import { useState } from "react"
 import CommentModal from "../Modals/CommentModal/CommentModal"
+import ReportModal from "../Modals/ReportModal/ReportModal"
 
 
 interface propsIntF {
@@ -14,6 +15,7 @@ interface propsIntF {
 const MiscBtnsPlayMovieGroup = ({ movie }: propsIntF) => {
 	const [showTrailer, setShowTrailer] = useState(false)
 	const [showComments, setShowComments] = useState(false)
+	const [showReport, setShowReport] = useState(false)
 
 	return (
 		<>
@@ -28,7 +30,10 @@ const MiscBtnsPlayMovieGroup = ({ movie }: propsIntF) => {
 					            children={ <BsChat/> }
 					            onClick={ () => setShowComments(true) }
 					/>
-					<WrapperBtn title="report" children={ <BsFlag/> }/>
+					<WrapperBtn title="report"
+					            children={ <BsFlag/> }
+					            onClick={ () => setShowReport(true) }
+					/>
 				</IconContext.Provider>
 			</div>
 			<TrailerModal
@@ -40,6 +45,11 @@ const MiscBtnsPlayMovieGroup = ({ movie }: propsIntF) => {
 				movie={ movie }
 				showModal={ showComments }
 				setShowModal={ (v: boolean) => setShowComments(v) }
+			/>
+			<ReportModal
+				movie={ movie }
+				showModal={ showReport }
+				setShowModal={ (v: boolean) => setShowReport(v) }
 			/>
 		</>
 	)

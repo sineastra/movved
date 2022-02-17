@@ -20,6 +20,7 @@ const mockedMovie = {
 	comments: [{
 		_id: 'a',
 		user: {
+			_id: '1',
 			name: 'pesho',
 			email: 'a',
 			password: 'a',
@@ -28,6 +29,7 @@ const mockedMovie = {
 	}, {
 		_id: 'a',
 		user: {
+			_id: '1',
 			name: 'pesho',
 			email: 'a',
 			password: 'a',
@@ -36,22 +38,7 @@ const mockedMovie = {
 	}, {
 		_id: 'a',
 		user: {
-			name: 'pesho',
-			email: 'a',
-			password: 'a',
-			profilePic: null,
-		}, comment: 'comment',
-	}, {
-		_id: 'a',
-		user: {
-			name: 'pesho',
-			email: 'a',
-			password: 'a',
-			profilePic: null,
-		}, comment: 'comment',
-	}, {
-		_id: 'a',
-		user: {
+			_id: '1',
 			name: 'pesho',
 			email: 'a',
 			password: 'a',

@@ -5,16 +5,38 @@
   justify-content: initial;
   align-items: center;
   align-content: initial;
+  font-family: "Nunito", sans-serif;
 }
 .wrapper > * {
   width: 95%;
 }
-.wrapper > textarea {
-  height: 100px;
+.wrapper > form {
+  height: 130px;
+}
+.wrapper > form * {
   border-radius: 5px;
+  margin-bottom: 10px;
+}
+.wrapper > form > textarea {
+  height: 80px;
+  width: 100%;
   resize: none;
   padding: 10px;
-  margin-bottom: 10px;
+}
+.wrapper > form > .submitBtnWrapper {
+  text-align: end;
+}
+.wrapper > form > .submitBtnWrapper > button {
+  padding: 5px;
+  color: var(--theme-secondary-color);
+  background: transparent;
+  border: 1px solid var(--theme-secondary-color);
+  cursor: pointer;
+}
+.wrapper > form > .submitBtnWrapper > button:hover {
+  color: var(--theme-text-color);
+  border: 1px solid var(--theme-secondary-color);
+  background: var(--theme-secondary-color);
 }
 .wrapper > hr {
   border-color: var(--theme-secondary-color);
