@@ -11,7 +11,7 @@ interface propsIntF {
 const SingleGridMovie = ({ movie, className }: propsIntF) => {
 	return (
 		<div className={ className }>
-			<Link to={ `/movie/${ movie.watchLink }` } className={ styles.link }>
+			<Link to={ `/movies/${ movie.watchLink }` } className={ styles.link }>
 				<span className={ styles.yearSpan }>{ movie.year }</span>
 				{ movie.isDubbed && <span className={ styles.subSpan }>Dub</span> }
 				{ movie.isSubbed && <span className={ styles.dubSpan }>Sub</span> }

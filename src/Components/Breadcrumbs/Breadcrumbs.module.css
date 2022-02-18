@@ -1,0 +1,9 @@
+.wrapper * {
+  color: var(--theme-subtext-color);
+  text-decoration: none;
+}
+.wrapper .lastSpan * {
+  color: var(--theme-text-color);
+}
+
+/*# sourceMappingURL=Breadcrumbs.module.css.map */

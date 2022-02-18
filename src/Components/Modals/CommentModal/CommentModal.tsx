@@ -26,7 +26,6 @@ const CommentModal = ({ movie, showModal, setShowModal }: propsIntF) => {
 
 		if (comment && typeof comment === 'string') {
 			const newComments = await movieRequests.addComment(movie._id, comment)
-			console.log(movieRequests)
 
 			setComments(newComments)
 		}

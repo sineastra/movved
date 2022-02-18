@@ -1,0 +1,12 @@
+.wrapper {
+    & * {
+        color: var(--theme-subtext-color);
+        text-decoration: none;
+    }
+
+    & .lastSpan {
+        & * {
+            color: var(--theme-text-color);
+        }
+    }
+}

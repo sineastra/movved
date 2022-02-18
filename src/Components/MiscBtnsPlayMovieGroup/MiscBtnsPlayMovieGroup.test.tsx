@@ -60,7 +60,7 @@ jest.mock("../../requests/movieRequests", () => {
 				profilePic: 'a',
 			}, comment: 'comment',
 		}, { _id: 'b', user: mockedUser, comment: newComment }]),
-		sendReport: jest.fn()
+		sendReport: jest.fn(),
 	}
 })
 
@@ -203,11 +203,13 @@ describe("---> testing MiscBtnsPlayMovieGroup modals on logged IN user", () => {
 
 		const submitBtn = screen.getByText(/send the report/i)
 
-		await user.click(submitBtn)
+		await act(async () => {
+			await user.click(submitBtn)
+
+		})
 
 		expect(backdrops[2]).toHaveClass('hiddenBackdrop')
 		expect(movieRequests.sendReport).toHaveBeenCalledTimes(1)
 	})
 })
 
-export {}

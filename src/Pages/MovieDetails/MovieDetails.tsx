@@ -3,12 +3,17 @@ import BigMoviePosterTest from "../../Components/BigMoviePoster/BigMoviePoster"
 import bigPoster from "../../assets/exampleMoviePoster.jpg"
 import WatchMovieButtons from "../../Components/WatchMovieButtons/WatchMovieButtons"
 import { signedUserInfoInterface } from "../../_misc/interfaces"
+import MoviesCategoryCarousel from "../../Components/MoviesCategoryCarousel/MoviesCategoryCarousel"
+import { useEffect } from "react"
+import store from "../../_state/app/store"
+import { setCurrentMovie } from "../../_state/features/moviesSlice"
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs"
 
 
 const mockedMovie = {
 	_id: '0',
 	title: 'Филма на Пешо',
-	smallPoster: '',
+	smallPoster: 'https://image.tmdb.org/t/p/w342/lnWkyG3LLgbbrIEeyl5mK5VRFe4.jpg',
 	bigPoster: bigPoster,
 	isSubbed: true,
 	isDubbed: true,
@@ -52,6 +57,12 @@ const mockedMovie = {
 
 const MovieDetails = () => {
 
+	useEffect(() => {
+		// simulate api call.
+
+		store.dispatch(setCurrentMovie(mockedMovie))
+	}, [])
+
 	return (
 		<div className={ styles.wrapper }>
 			<BigMoviePosterTest movie={ mockedMovie }/>
@@ -75,6 +86,15 @@ const MovieDetails = () => {
 						className={ styles.diffColor }>Аудио: </span><span>{ mockedMovie.isDubbed ? 'Българско' : 'Субтитри' }</span>
 				</div>
 				<hr/>
+			</div>
+			<div className={ styles.similarMoviesWrapper }>
+				<h2>You might also like..</h2>
+				<MoviesCategoryCarousel
+					movies={ [mockedMovie, mockedMovie, mockedMovie, mockedMovie, mockedMovie, mockedMovie, mockedMovie, mockedMovie] }/>
+			</div>
+			<hr/>
+			<div className={ styles.breadcrumbsWrapper }>
+				<Breadcrumbs/>
 			</div>
 		</div>
 	)

@@ -15,7 +15,7 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 				slideWidth={ '200px' }
 				cellSpacing={ 20 }
 				height={ '370px' }
-				width={ '90%' }
+				width={ '100vw' }
 				className={ styles.carousel }
 				defaultControlsConfig={
 					{
@@ -29,6 +29,7 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 				}
 				easing={ "easeBackOut" }
 				slidesToScroll={ "auto" }
+				frameOverflow={ "initial" }
 
 			>
 				{ movies.map(x => <SingleGridMovie className={ styles.slide } movie={ x } key={ x._id }/>) }
