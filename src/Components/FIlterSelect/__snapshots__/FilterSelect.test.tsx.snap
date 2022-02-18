@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`---> Testing FilterSelect component snapshot test 1`] = `
+<select
+  aria-label=""
+  className="select"
+  defaultValue="title"
+  name="name"
+  onChange={[Function]}
+>
+  <option
+    disabled={true}
+    value="title"
+  >
+    -- 
+    title
+     --
+  </option>
+  <option
+    value=""
+  >
+    All
+  </option>
+  <option
+    value="optionQuery"
+  >
+    optionTitle
+  </option>
+  <option
+    value="optionQuery1"
+  >
+    optionTitle1
+  </option>
+</select>
+`;

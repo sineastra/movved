@@ -28,5 +28,16 @@ export interface movieInterface {
 	actors: string[],
 	director: string,
 	description?: string,
+	rating?: number,
+	views?: number,
+}
+
+export interface filterIntF {
+	name: string,
+	title: string,
+	options: {
+		optionTitle: string,
+		optionQuery: string
+	}[]
 }
 

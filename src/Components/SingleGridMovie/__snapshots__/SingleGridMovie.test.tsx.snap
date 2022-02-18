@@ -4,7 +4,7 @@ exports[`---> Testing Single Slide of Movies Category Carousel renders correctly
 <div>
   <a
     className="link"
-    href="/movie/d"
+    href="/movies/d"
     onClick={[Function]}
   >
     <span
@@ -40,7 +40,7 @@ exports[`---> Testing Single Slide of Movies Category Carousel renders correctly
 <div>
   <a
     className="link"
-    href="/movie/d"
+    href="/movies/d"
     onClick={[Function]}
   >
     <span

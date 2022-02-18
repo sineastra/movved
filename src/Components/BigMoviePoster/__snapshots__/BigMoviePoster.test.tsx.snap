@@ -2,7 +2,7 @@
 
 exports[`---> Snapshot test of BigMoviePoster should render properly 1`] = `
 <section
-  className="posterWrapper"
+  className="posterWrapper "
 >
   <img
     alt="big-poster"

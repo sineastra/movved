@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px 20px;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=Movies.module.css.map */
