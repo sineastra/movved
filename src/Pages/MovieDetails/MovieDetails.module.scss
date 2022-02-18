@@ -1,16 +1,26 @@
 @import "../../_scssPartials/mixins/mixins";
+@import "../../_scssPartials/variables";
 
 .wrapper {
-    margin-bottom: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-bottom: 50px;
+    padding-left: $mobile-side-padding;
+    padding-right: $mobile-side-padding;
 
     & > .content {
         background-color: var(--theme-main-color_2);
     }
 
+    & > .poster {
+        margin-left: -$mobile-side-padding;
+
+        & .headingsWrapper {
+            margin-right: $mobile-side-padding;
+        }
+    }
+
     & > .descriptionWrapper {
         @include centeredFlex(column);
+        margin-top: 20px;
 
         & > .genresWrapper {
             @include displayFlex(row);

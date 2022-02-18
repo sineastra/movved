@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import LandingPage from "../../Pages/LandingPage/LandingPage"
+import Landing from "../../Pages/Landing/Landing"
 import MainLayout from "../../Layouts/MainLayout"
 import MovieDetails from "../../Pages/MovieDetails/MovieDetails"
 
@@ -9,7 +9,7 @@ const AppRouter = () => {
 	return (
 		<Routes>
 			<Route path="/" element={ <MainLayout/> }>
-				<Route path="/" element={ <LandingPage/> }/>
+				<Route path="/" element={ <Landing/> }/>
 				<Route path="/movies/:id" element={ <MovieDetails/> }/>
 			</Route>
 		</Routes>

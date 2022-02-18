@@ -1,10 +1,16 @@
 .wrapper {
-  margin-bottom: 100px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .wrapper > .content {
   background-color: var(--theme-main-color_2);
+}
+.wrapper > .poster {
+  margin-left: -30px;
+}
+.wrapper > .poster .headingsWrapper {
+  margin-right: 30px;
 }
 .wrapper > .descriptionWrapper {
   display: flex;
@@ -12,6 +18,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-top: 20px;
 }
 .wrapper > .descriptionWrapper > .genresWrapper {
   display: flex;

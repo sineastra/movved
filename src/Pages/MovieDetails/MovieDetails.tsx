@@ -65,7 +65,7 @@ const MovieDetails = () => {
 
 	return (
 		<div className={ styles.wrapper }>
-			<BigMoviePosterTest movie={ mockedMovie }/>
+			<BigMoviePosterTest movie={ mockedMovie } className={ styles.poster }/>
 			<WatchMovieButtons movie={ mockedMovie }/>
 			<div className={ styles.descriptionWrapper }>
 				<div className={ styles.genresWrapper }>

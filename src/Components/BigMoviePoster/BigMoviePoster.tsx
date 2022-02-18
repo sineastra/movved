@@ -3,11 +3,12 @@ import { movieInterface } from "../../_misc/interfaces"
 
 
 interface propsIntF {
-	movie: movieInterface
+	movie: movieInterface,
+	className?: string
 }
-const BigMoviePosterTest = ({ movie }: propsIntF) => {
+const BigMoviePosterTest = ({ movie, className = '' }: propsIntF) => {
 	return (
-		<section className={ styles.posterWrapper }>
+		<section className={ `${ styles.posterWrapper } ${ className }` }>
 			<img src={ movie.bigPoster } alt="big-poster"/>
 			<div className={ styles.headingsWrapper }>
 				<h2>{ movie.title }</h2>

@@ -3,7 +3,7 @@ import image from "../../assets/tree-736885__480.jpeg"
 import { slideIntF } from "../../Components/LandingPageCarousel/_interfaces"
 import MoviesCategoryCarousel from "../../Components/MoviesCategoryCarousel/MoviesCategoryCarousel"
 import { movieInterface } from "../../_misc/interfaces"
-import styles from "./LandingPage.module.scss"
+import styles from "./Landing.module.scss"
 
 
 const mockedData: slideIntF[] = [
@@ -128,7 +128,7 @@ const SingleCategory = ({ title, movies }: singleCategoryPropsIntF) => {
 	)
 }
 
-const LandingPage = () => {
+const Landing = () => {
 	const headings: string[] = ['Нашите предложения', 'Нови филми', 'Нови сериали', 'Популярни', 'Дублирани на български']
 	const promiseAllMock = [mockedMovies, mockedMovies, mockedMovies, mockedMovies, mockedMovies]
 
@@ -144,4 +144,4 @@ const LandingPage = () => {
 	)
 }
 
-export default LandingPage
+export default Landing

@@ -1,4 +1,5 @@
 @import "../../_scssPartials/mixins/mixins";
+@import "../../_scssPartials/variables";
 
 .posterWrapper {
     width: 100vw;
@@ -25,7 +26,7 @@
     & .headingsWrapper {
         bottom: 0;
         z-index: 2;
-        left: 20px;
+        left: $mobile-side-padding;
         position: absolute;
         @include displayFlex(column, center);
 
