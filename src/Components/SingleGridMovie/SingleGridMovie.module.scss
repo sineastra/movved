@@ -1,17 +1,20 @@
 @import "../../_scssPartials/mixins/mixins";
 
 $span-width: 32px;
-@mixin slide-width-height {
-    width: 200px;
-    height: 300px;
+
+.wrapper {
+    width: 100%;
+    height: 100%;
 }
 
 .slide {
-    @include slide-width-height;
+    width: 100%;
+    height: 100%;
 }
 
 a.link {
-    @include slide-width-height;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     position: absolute;
     top: 0;
@@ -50,9 +53,7 @@ a.link {
     }
 
     & > h4, h5 {
-        margin: 0;
-        margin-top: 3px;
-        margin-bottom: 3px;
+        margin: 3px 0;
         color: lightgray;
         font-family: 'Monda', sans-serif;
     }

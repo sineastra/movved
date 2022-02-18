@@ -8,9 +8,9 @@ interface propsIntF {
 	className?: string,
 }
 
-const SingleGridMovie = ({ movie, className }: propsIntF) => {
+const SingleGridMovie = ({ movie, className = '' }: propsIntF) => {
 	return (
-		<div className={ className }>
+		<div className={ `${ styles.wrapper } ${ className }` }>
 			<Link to={ `/movies/${ movie.watchLink }` } className={ styles.link }>
 				<span className={ styles.yearSpan }>{ movie.year }</span>
 				{ movie.isDubbed && <span className={ styles.subSpan }>Dub</span> }

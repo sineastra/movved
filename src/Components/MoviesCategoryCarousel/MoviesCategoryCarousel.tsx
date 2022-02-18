@@ -32,7 +32,11 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 				frameOverflow={ "initial" }
 
 			>
-				{ movies.map(x => <SingleGridMovie className={ styles.slide } movie={ x } key={ x._id }/>) }
+				{ movies.map(x => (
+					<div className={ styles.slideWrapper }>
+						<SingleGridMovie className={ styles.slide } movie={ x } key={ x._id }/>
+					</div>
+				)) }
 			</Carousel>
 		</div>
 	)

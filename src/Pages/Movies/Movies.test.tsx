@@ -1,35 +1,11 @@
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import Movies from "./Movies"
 import user from "@testing-library/user-event"
 import { filterIntF } from "../../_misc/interfaces"
+import renderer from "react-test-renderer"
 
 
-const mockedMovie = {
-	_id: '0',
-	title: 'Pesho',
-	smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
-	bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
-	isSubbed: true,
-	isDubbed: true,
-	year: 1992,
-	watchLink: 'a',
-	engTitle: 'eng',
-	genres: ['film'],
-	trailerLink: 'a',
-	comments: [{
-		_id: 'a',
-		user: {
-			_id: '1',
-			name: 'a',
-			email: 'a',
-			password: 'a',
-			profilePic: 'a',
-		}, comment: 'comment',
-	}],
-	actors: ['a', 'b'],
-	director: 'a',
-}
 jest.mock("../../_misc/misc", () => {
 	return [{
 		name: 'name',
@@ -46,6 +22,35 @@ jest.mock("../../_misc/misc", () => {
 			optionQuery: 'optionQuery1',
 		}],
 	}]
+})
+jest.mock("../../requests/movieRequests", () => {
+	return {
+		getSearchMovies: jest.fn(() => ([{
+			_id: '0',
+			title: 'Pesho',
+			smallPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+			bigPoster: 'https://image.tmdb.org/t/p/w342/yYpNLw1j6BrtCpqjalLkjeXTUz9.jpg',
+			isSubbed: true,
+			isDubbed: true,
+			year: 1992,
+			watchLink: 'a',
+			engTitle: 'eng',
+			genres: ['film'],
+			trailerLink: 'a',
+			comments: [{
+				_id: 'a',
+				user: {
+					_id: '1',
+					name: 'a',
+					email: 'a',
+					password: 'a',
+					profilePic: 'a',
+				}, comment: 'comment',
+			}],
+			actors: ['a', 'b'],
+			director: 'a',
+		}])),
+	}
 })
 
 describe("---> Testing Movie Page", () => {
@@ -68,5 +73,14 @@ describe("---> Testing Movie Page", () => {
 
 		expect(search.get('name')).toBe("optionQuery")
 		expect(search.get('name1')).toBe('optionQuery1')
+	})
+	it("renders correctly", async () => {
+		await act(async () => {
+			await renderScreen()
+		})
+
+		const slides = screen.getAllByRole("img")
+
+		expect(slides.length).toBe(1)
 	})
 })

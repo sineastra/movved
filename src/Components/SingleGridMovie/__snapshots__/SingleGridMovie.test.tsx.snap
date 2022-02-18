@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`---> Testing Single Slide of Movies Category Carousel renders correctly when isSubbed and/or isDubbed are NOT present (snapshot testing) 1`] = `
-<div>
+<div
+  className="wrapper "
+>
   <a
     className="link"
     href="/movies/d"
@@ -37,7 +39,9 @@ exports[`---> Testing Single Slide of Movies Category Carousel renders correctly
 `;
 
 exports[`---> Testing Single Slide of Movies Category Carousel renders correctly when isSubbed and/or isDubbed are present (snapshot testing) 1`] = `
-<div>
+<div
+  className="wrapper "
+>
   <a
     className="link"
     href="/movies/d"

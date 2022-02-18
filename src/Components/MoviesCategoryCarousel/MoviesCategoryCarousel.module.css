@@ -8,6 +8,13 @@
   height: 300px;
 }
 
+.slideWrapper {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-bottom: 70px;
+}
+
 .container {
   height: 100px;
 }

@@ -1,9 +1,61 @@
 .wrapper {
   padding: 20px;
+}
+.wrapper > .headingsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  align-content: initial;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.wrapper > .headingsWrapper > h1, .wrapper > .headingsWrapper h3 {
+  margin: 0 0 20px;
+}
+.wrapper > .headingsWrapper > h3 {
+  color: var(--theme-subtext-color);
+}
+.wrapper > .filtersWrapper {
   display: grid;
   grid-template-columns: repeat(2, 200px);
-  gap: 20px 20px;
+  gap: 20px 40px;
   justify-content: center;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper > .filtersWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.wrapper > .moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px 40px;
+  justify-items: center;
+  justify-content: center;
+}
+.wrapper > .moviesGrid > .slideWrapper {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper > .moviesGrid > .slideWrapper {
+    width: 80vw;
+    height: 128vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper > .moviesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wrapper > .moviesGrid {
+    gap: 0;
+  }
 }
 
 /*# sourceMappingURL=Movies.module.css.map */

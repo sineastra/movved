@@ -1,7 +1,59 @@
+@import "../../_scssPartials/mixins/mixins";
+@import "../../_scssPartials/mixins/mediaQueries";
+
 .wrapper {
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    gap: 20px 20px;
-    justify-content: center;
+
+    & > .headingsWrapper {
+        @include displayFlex(column);
+        width: 100%;
+        margin-bottom: 30px;
+
+        & > h1, h3 {
+            margin: 0 0 20px;
+        }
+
+        & > h3 {
+            color: var(--theme-subtext-color);
+        }
+    }
+
+    & > .filtersWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, $slide-width);
+        gap: 20px 40px;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    & > .moviesGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $slide-width);
+        gap: 20px 40px;
+        justify-items: center;
+        justify-content: center;
+
+        & > .slideWrapper {
+            position: relative;
+            @include slide-width-height;
+            margin-bottom: 80px;
+
+            @include mobile {
+                width: 80vw;
+                height: 128vw;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        @include small-mobile{
+            gap: 0;
+        }
+    }
 }
