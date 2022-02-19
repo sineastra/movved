@@ -40,7 +40,7 @@ const Movies = () => {
 				<h1>Movies</h1>
 				<h3>Watch awesome dubbed and subbed movies online.</h3>
 			</section>
-			<div className={ styles.filtersWrapper }>
+			<section className={ styles.filtersWrapper }>
 				{ filtersData.map(x =>
 					<FilterSelect
 						name={ x.name }
@@ -49,21 +49,33 @@ const Movies = () => {
 						key={ x.name }
 						ariaLabel={ x.name }
 					/>) }
-			</div>
-			<div className={ styles.moviesGrid }>
+			</section>
+			<section className={ styles.moviesGrid }>
 				{ movies.map(x => (
 					<div className={ styles.slideWrapper }>
 						<SingleGridMovie movie={ x } key={ x._id }/>
 					</div>
 				)) }
+			</section>
+			<div className={ styles.paginationSection }>
+				<StyledPagination
+					activePage={ activePage || 1 }
+					itemsCountPerPage={ 2 }
+					totalItemsCount={ allMoviesCount }
+					pageRangeDisplayed={ 5 }
+					onChange={ changePage }
+				/>
 			</div>
-			<StyledPagination
-				activePage={ activePage || 1 }
-				itemsCountPerPage={ 2 }
-				totalItemsCount={ allMoviesCount }
-				pageRangeDisplayed={ 5 }
-				onChange={ changePage }
-			/>
+			<article className={ styles.endArticle }>
+				<h1>Онлайн Филми</h1>
+
+				<p>
+					Едно от най-добрите удобства на днешната технология е факта, че имаме възможност да се наслаждаваме
+					на
+					най-любимите си филми навсякъде и по всяко време. Гледането на онлайн филми е по-лесно от всякога,
+					когато използвате специални уебсайтове, предназначени за точно тази цел.
+				</p>
+			</article>
 		</div>
 	)
 }

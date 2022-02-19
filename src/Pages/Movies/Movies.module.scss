@@ -52,8 +52,23 @@
             grid-template-columns: 1fr;
         }
 
-        @include small-mobile{
+        @include small-mobile {
             gap: 0;
+        }
+    }
+
+    & > .paginationSection {
+        margin-top: 30px;
+    }
+
+    & > .endArticle {
+        margin-top: 70px;
+        margin-bottom: 30px;
+
+        & > p {
+            color: var(--theme-subtext-color);
+            font-size: 1.2rem;
+            line-height: 30px;
         }
     }
 }
