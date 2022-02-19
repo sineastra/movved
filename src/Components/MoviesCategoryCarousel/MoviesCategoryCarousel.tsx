@@ -29,7 +29,7 @@ const MoviesCategoryCarousel = ({ movies }: props) => {
 				}
 				easing={ "easeBackOut" }
 				slidesToScroll={ "auto" }
-				frameOverflow={ "initial" }
+				frameOverflow={ "hidden" }
 
 			>
 				{ movies.map(x => (

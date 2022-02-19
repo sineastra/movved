@@ -1,0 +1,39 @@
+@import "../../_scssPartials/mixins/mixins";
+
+.ulClass {
+    list-style: none;
+    @include displayFlex(row, center);
+    padding-left: 0;
+    width: 100%;
+}
+
+.linkClass {
+    text-decoration: none;
+    color: var(--theme-text-color);
+}
+
+.itemClass {
+    padding: 5px 15px;
+    border: 1px solid var(--theme-subtext-color);
+    cursor: pointer;
+
+    &:first-of-type {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &:last-of-type {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+        background: var(--theme-secondary-color);
+        border-color: var(--theme-secondary-color);
+    }
+}
+
+.activeLi {
+    background: var(--theme-secondary-color);
+    border-color: var(--theme-secondary-color);
+}

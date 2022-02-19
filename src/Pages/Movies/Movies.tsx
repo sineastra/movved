@@ -1,26 +1,38 @@
 import FilterSelect from "../../Components/FIlterSelect/FilterSelect"
 import filtersData from "../../_misc/misc"
 import styles from "./Movies.module.scss"
-import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { BaseSyntheticEvent, useEffect, useState } from "react"
+import { useSearchParams } from "react-router-dom"
 import { movieInterface } from "../../_misc/interfaces"
 import SingleGridMovie from "../../Components/SingleGridMovie/SingleGridMovie"
 import movieRequests from "../../requests/movieRequests"
+import Pagination from "react-js-pagination"
+import StyledPagination from "../../Components/StyledPagination/StyledPagination"
 
 
 const Movies = () => {
-	const location = useLocation()
+	const [searchParams, setSearchParams] = useSearchParams()
 	const [movies, setMovies] = useState<movieInterface[]>([])
+	const [allMoviesCount, setAllMoviesCount] = useState(0)
+	const [activePage, setActivePage] = useState<number | null>(0)
 
 	useEffect(() => {
 		const getData = async () => {
-			const moviesData = await movieRequests.getSearchMovies(location.search)
+			const moviesData = await movieRequests.getSearchMovies(searchParams.toString())
 
-			setMovies(moviesData)
+			setMovies(moviesData.movies)
+			setAllMoviesCount(moviesData.totalMoviesCount)
 		}
 
+		const page = searchParams.get('page')
+		setActivePage(Number(page) || null)
+
 		getData()
-	}, [location.search])
+	}, [searchParams])
+
+	const changePage = (e: number) => {
+		setSearchParams({ ...searchParams, page: `${ e }` })
+	}
 
 	return (
 		<div className={ styles.wrapper }>
@@ -45,6 +57,13 @@ const Movies = () => {
 					</div>
 				)) }
 			</div>
+			<StyledPagination
+				activePage={ activePage || 1 }
+				itemsCountPerPage={ 2 }
+				totalItemsCount={ allMoviesCount }
+				pageRangeDisplayed={ 5 }
+				onChange={ changePage }
+			/>
 		</div>
 	)
 }

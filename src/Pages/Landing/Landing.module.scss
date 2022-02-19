@@ -1,6 +1,9 @@
+@import "../../_scssPartials/variables";
+
 .categoriesWrapper {
     margin-top: 100px;
     margin-bottom: 150px;
+    padding-left: $mobile-side-padding;
 
     & .singleCategoryWrapper {
         margin-top: 50px;

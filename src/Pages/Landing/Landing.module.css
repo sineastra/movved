@@ -1,6 +1,7 @@
 .categoriesWrapper {
   margin-top: 100px;
   margin-bottom: 150px;
+  padding-left: 30px;
 }
 .categoriesWrapper .singleCategoryWrapper {
   margin-top: 50px;

@@ -44,7 +44,7 @@
     & > div:nth-of-type(2) {
         height: 160px;
         position: absolute;
-        background: var(--theme-subtext-color);
+        background: var(--theme-main-color_2);
         border: 1px solid var(--theme-main-color_1);
         padding: 10px;
         border-radius: 5px;
@@ -65,7 +65,7 @@
 
         & > a {
             text-decoration: none;
-            color: var(--theme-main-color_1);
+            color: var(--theme-text-color);
         }
     }
 }

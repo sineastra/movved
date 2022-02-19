@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Landing.module.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;AAEA;EACI;;AAEA;EACI;EACA","file":"Landing.module.css"}
+{"version":3,"sourceRoot":"","sources":["Landing.module.scss","../../_scssPartials/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA,cCLkB;;ADOlB;EACI;;AAEA;EACI;EACA","file":"Landing.module.css"}
