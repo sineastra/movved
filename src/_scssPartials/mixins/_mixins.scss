@@ -1,4 +1,5 @@
 @import "../variables";
+@import "./mediaQueries";
 
 @mixin displayFlex($direction: row, $justify: initial, $alignItems: initial, $alignContent: initial, ) {
     display: flex;
@@ -15,4 +16,32 @@
 @mixin slide-width-height {
     width: $slide-width;
     height: $slide-height;
+}
+
+@mixin movieGridCell {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, $slide-width);
+    gap: 20px 40px;
+    justify-items: center;
+    justify-content: center;
+
+    & > .slideWrapper {
+        position: relative;
+        @include slide-width-height;
+        margin-bottom: 80px;
+
+        @include mobile {
+            width: 80vw;
+            height: 128vw;
+        }
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    @include small-mobile {
+        gap: 0;
+    }
 }

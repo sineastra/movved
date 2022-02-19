@@ -1,0 +1,37 @@
+@import "../../_scssPartials/variables";
+@import "../../_scssPartials/mixins/mixins";
+@import "../../_scssPartials/mixins/mediaQueries";
+
+.wrapper {
+    @include displayFlex(column, initial, center);
+    margin-top: 30px;
+
+    & > h2 {
+        padding-left: $mobile-side-padding;
+        padding-right: $mobile-side-padding;
+        text-align: center;
+    }
+
+    & > .searchInputWrapper {
+        width: 100%;
+        @include centeredFlex();
+
+        & > .searchInput {
+            width: 50%;
+
+            @include mobile {
+                width: 80%;
+            }
+        }
+    }
+
+    & > .moviesGrid {
+        margin-top: 50px;
+        @include movieGridCell
+    }
+
+    & > .paginationSection {
+        margin-bottom: 70px;
+        margin-top: 40px;
+    }
+}

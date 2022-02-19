@@ -7,7 +7,7 @@ import SingleGridMovie from "../SingleGridMovie/SingleGridMovie"
 interface props {
 	movies: movieInterface[]
 }
-
+//TODO: maybe extract the SingleGridMovie into component cus too much repetition of the wrapper
 const MoviesCategoryCarousel = ({ movies }: props) => {
 	return (
 		<div className={ styles.carouselWrapper }>

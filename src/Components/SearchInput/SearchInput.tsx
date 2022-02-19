@@ -1,27 +1,23 @@
 import styles from "./SearchInput.module.scss"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom"
 import { FaSearch } from "react-icons/fa"
 import { BaseSyntheticEvent, useEffect, useState } from "react"
 import { IconContext } from "react-icons"
 
 
 interface searchInputPropsIntF {
-	pathname: string,
 	className?: string,
 }
 
-const SearchInput = ({ pathname, className = '' }: searchInputPropsIntF) => {
+const SearchInput = ({ className = '' }: searchInputPropsIntF) => {
 	const [searchValue, setSearchValue] = useState('')
-	const navigate = useNavigate()
+	const [searchParams, setSearchParams] = useSearchParams()
 
 	const handleSubmit = (e: BaseSyntheticEvent) => {
 		e.preventDefault()
 
 		if (searchValue !== '') {
-			navigate({
-				pathname: pathname,
-				search: `?search=${ searchValue }`,
-			})
+			setSearchParams({ search: searchValue })
 			setSearchValue('')
 		}
 

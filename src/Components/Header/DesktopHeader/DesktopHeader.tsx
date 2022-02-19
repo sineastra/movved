@@ -36,7 +36,7 @@ const DesktopHeader = ({ loggedUser = loggedUserMock, className = '' }: desktopP
 			<Link to="movies">Movies</Link>
 			<Link to="series">Series</Link>
 			<Link to="actors">Actors</Link>
-			<SearchInput pathname={ pathname }/>
+			<SearchInput/>
 			<div className={ styles.userDesktopNavLink }>
 				{ loggedUser
 					? <>

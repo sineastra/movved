@@ -3,6 +3,7 @@ import Landing from "../../Pages/Landing/Landing"
 import MainLayout from "../../Layouts/MainLayout"
 import MovieDetails from "../../Pages/MovieDetails/MovieDetails"
 import Movies from "../../Pages/Movies/Movies"
+import Search from "../../Pages/Search/Search"
 
 
 const AppRouter = () => {
@@ -13,6 +14,7 @@ const AppRouter = () => {
 				<Route path="/" element={ <Landing/> }/>
 				<Route path="/movies" element={ <Movies/> }/>
 				<Route path="/movies/:id" element={ <MovieDetails/> }/>
+				<Route path="/search" element={ <Search/> }/>
 			</Route>
 		</Routes>
 	)

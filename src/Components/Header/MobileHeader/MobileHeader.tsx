@@ -21,7 +21,7 @@ const MobileHeader = ({ toggleAsideNav, className = '' }: mobilePropsInterface) 
 					<MainLogoSVG/>
 				</Link>
 			</div>
-			<SearchInput pathname={ "/" } className={ styles.searchInput }/>
+			<SearchInput className={ styles.searchInput }/>
 			<div className={ styles.toggleAsideNav } onClick={ toggleAsideNav }>
 				<IconContext.Provider value={ { size: '1.5em', className: styles.barsIcon } }>
 					<FaBars title="Open Side Menu"/>

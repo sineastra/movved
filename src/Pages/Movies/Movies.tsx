@@ -1,12 +1,11 @@
 import FilterSelect from "../../Components/FIlterSelect/FilterSelect"
 import filtersData from "../../_misc/misc"
 import styles from "./Movies.module.scss"
-import { BaseSyntheticEvent, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import { movieInterface } from "../../_misc/interfaces"
 import SingleGridMovie from "../../Components/SingleGridMovie/SingleGridMovie"
 import movieRequests from "../../requests/movieRequests"
-import Pagination from "react-js-pagination"
 import StyledPagination from "../../Components/StyledPagination/StyledPagination"
 
 
@@ -18,7 +17,7 @@ const Movies = () => {
 
 	useEffect(() => {
 		const getData = async () => {
-			const moviesData = await movieRequests.getSearchMovies(searchParams.toString())
+			const moviesData = await movieRequests.getFilterMovies(searchParams.toString())
 
 			setMovies(moviesData.movies)
 			setAllMoviesCount(moviesData.totalMoviesCount)

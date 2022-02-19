@@ -1,34 +1,34 @@
 .wrapper {
-  padding: 20px;
-}
-.wrapper > .headingsWrapper {
   display: flex;
   flex-direction: column;
   justify-content: initial;
-  align-items: initial;
+  align-items: center;
   align-content: initial;
+  margin-top: 30px;
+}
+.wrapper > h2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+.wrapper > .searchInputWrapper {
   width: 100%;
-  margin-bottom: 30px;
-}
-.wrapper > .headingsWrapper > h1, .wrapper > .headingsWrapper h3 {
-  margin: 0 0 20px;
-}
-.wrapper > .headingsWrapper > h3 {
-  color: var(--theme-subtext-color);
-}
-.wrapper > .filtersWrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 200px);
-  gap: 20px 40px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  align-content: center;
+}
+.wrapper > .searchInputWrapper > .searchInput {
+  width: 50%;
 }
 @media screen and (max-width: 480px) {
-  .wrapper > .filtersWrapper {
-    grid-template-columns: 1fr;
+  .wrapper > .searchInputWrapper > .searchInput {
+    width: 80%;
   }
 }
 .wrapper > .moviesGrid {
+  margin-top: 50px;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fill, 200px);
@@ -59,16 +59,8 @@
   }
 }
 .wrapper > .paginationSection {
-  margin-top: 30px;
-}
-.wrapper > .endArticle {
-  margin-top: 70px;
-  margin-bottom: 30px;
-}
-.wrapper > .endArticle > p {
-  color: var(--theme-subtext-color);
-  font-size: 1.2rem;
-  line-height: 30px;
+  margin-bottom: 70px;
+  margin-top: 40px;
 }
 
-/*# sourceMappingURL=Movies.module.css.map */
+/*# sourceMappingURL=Search.module.css.map */

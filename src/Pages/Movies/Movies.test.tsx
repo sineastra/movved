@@ -25,7 +25,7 @@ jest.mock("../../_misc/misc", () => {
 })
 jest.mock("../../requests/movieRequests", () => {
 	return {
-		getSearchMovies: jest.fn(() => ({
+		getFilterMovies: jest.fn(() => ({
 			movies: [{
 				_id: '0',
 				title: 'Pesho',
