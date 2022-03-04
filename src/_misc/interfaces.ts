@@ -41,3 +41,7 @@ export interface filterIntF {
 	}[]
 }
 
+export interface moviesForGridIntF {
+	movies: movieInterface[],
+	totalMoviesCount: number
+}

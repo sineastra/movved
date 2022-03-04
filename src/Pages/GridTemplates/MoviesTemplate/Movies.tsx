@@ -1,37 +1,15 @@
-import FilterSelect from "../../Components/FIlterSelect/FilterSelect"
-import filtersData from "../../_misc/misc"
+import filtersData from "../../../_misc/misc"
+import FilterSelect from "../../../Components/FIlterSelect/FilterSelect"
+import SingleGridMovie from "../../../Components/SingleGridMovie/SingleGridMovie"
+import StyledPagination from "../../../Components/StyledPagination/StyledPagination"
 import styles from "./Movies.module.scss"
-import { useEffect, useState } from "react"
-import { useSearchParams } from "react-router-dom"
-import { movieInterface } from "../../_misc/interfaces"
-import SingleGridMovie from "../../Components/SingleGridMovie/SingleGridMovie"
-import movieRequests from "../../requests/movieRequests"
-import StyledPagination from "../../Components/StyledPagination/StyledPagination"
+import useFetchMoviesGrid from "../../../Custom Hooks/useFetchMoviesGrid"
+import movieRequests from "../../../requests/movieRequests"
 
 
 const Movies = () => {
-	const [searchParams, setSearchParams] = useSearchParams()
-	const [movies, setMovies] = useState<movieInterface[]>([])
-	const [allMoviesCount, setAllMoviesCount] = useState(0)
-	const [activePage, setActivePage] = useState<number | null>(0)
-
-	useEffect(() => {
-		const getData = async () => {
-			const moviesData = await movieRequests.getFilterMovies(searchParams.toString())
-
-			setMovies(moviesData.movies)
-			setAllMoviesCount(moviesData.totalMoviesCount)
-		}
-
-		const page = searchParams.get('page')
-		setActivePage(Number(page) || null)
-
-		getData()
-	}, [searchParams])
-
-	const changePage = (e: number) => {
-		setSearchParams({ ...searchParams, page: `${ e }` })
-	}
+	const request = (searchParams: URLSearchParams) => movieRequests.getFilterMovies(searchParams.toString())
+	const { movies, activePage, allMoviesCount, changePage } = useFetchMoviesGrid({ request })
 
 	return (
 		<div className={ styles.wrapper }>

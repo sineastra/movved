@@ -1,10 +1,7 @@
-import { movieCommentIntF, movieInterface, signedUserInfoInterface } from "../_misc/interfaces"
+import { movieCommentIntF, movieInterface, moviesForGridIntF, signedUserInfoInterface } from "../_misc/interfaces"
 
 
-interface moviesForGridIntF {
-	movies: movieInterface[],
-	totalMoviesCount: number
-}
+
 interface movieRequestsIntF {
 	sendReport: (m: string, type: string) => void,
 	addComment: (id: string, c: string) => Promise<movieCommentIntF[]>,

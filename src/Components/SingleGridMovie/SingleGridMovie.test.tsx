@@ -37,7 +37,7 @@ const renderScreen = (movie: movieInterface) =>
 		</BrowserRouter>,
 	).toJSON()
 
-describe('---> Testing Single Slide of Movies Category Carousel', () => {
+describe('---> Testing Single Slide of Grid Category Carousel', () => {
 	it("renders correctly when isSubbed and/or isDubbed are present (snapshot testing)", () => {
 		const tree = renderScreen(mockedMovie)
 

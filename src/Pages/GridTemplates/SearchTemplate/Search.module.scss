@@ -1,6 +1,6 @@
-@import "../../_scssPartials/variables";
-@import "../../_scssPartials/mixins/mixins";
-@import "../../_scssPartials/mixins/mediaQueries";
+@import "../../../_scssPartials/variables";
+@import "../../../_scssPartials/mixins/mixins";
+@import "../../../_scssPartials/mixins/mediaQueries";
 
 .wrapper {
     @include displayFlex(column, initial, center);
